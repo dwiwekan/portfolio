@@ -1,0 +1,92 @@
+[
+  {
+    "id": "aaai2027-conformal",
+    "title": "Permutation-Invariant Graph-Space Conformal Prediction for 3D Scene Graph Completion",
+    "authors": ["Ida Bagus Dwiweka Naratama", "Junghyun Oh"],
+    "venue": "AAAI Conference on Artificial Intelligence",
+    "venueShort": "AAAI 2027",
+    "type": "conference",
+    "year": 2027,
+    "status": "Under review",
+    "project": "conformal-scene-graph"
+  },
+  {
+    "id": "ijcas-uncertainty-exploration",
+    "title": "Transforming Explicit Map Prediction into Uncertainty Exploration for Object Goal Navigation",
+    "authors": ["Ida Bagus Dwiweka Naratama", "I Made Putra Arya Winata", "Sangcheol Oh", "Yuri Song", "Junghyun Oh"],
+    "venue": "International Journal of Control, Automation, and Systems",
+    "venueShort": "IJCAS",
+    "type": "journal",
+    "year": null,
+    "status": "Under revision",
+    "project": "uncertainty-map-exploration"
+  },
+  {
+    "id": "iccas2026-latentsgc",
+    "title": "Latent Flow Matching for Uncertainty-Aware 3D Scene Graph Completion from Partial Robot Observations",
+    "authors": ["Ida Bagus Dwiweka Naratama", "I Made Putra Arya Winata", "Junghyun Oh"],
+    "venue": "International Conference on Control, Automation and Systems",
+    "venueShort": "ICCAS 2026",
+    "type": "conference",
+    "year": 2026,
+    "status": "Accepted",
+    "project": "latent-flow-scene-graph"
+  },
+  {
+    "id": "kroc2026-vqlama",
+    "title": "VQ-LaMa: Discrete Semantic Map Inpainting for Efficient Exploration",
+    "authors": ["Ida Bagus Dwiweka Naratama", "I Made Putra Arya Winata", "Yuri Song", "Junghyun Oh"],
+    "venue": "Korea Robotics Society Annual Conference",
+    "venueShort": "KRoC 2026",
+    "type": "conference",
+    "year": 2026,
+    "date": "2026-02",
+    "pages": "858–860",
+    "status": "Published",
+    "project": "vq-lama"
+  },
+  {
+    "id": "kicem2025-quadruped",
+    "title": "Integrated Simulation Framework for Construction-Site Quadruped Navigation",
+    "authors": ["Ida Bagus Dwiweka Naratama", "Yuri Song", "Junghyun Oh"],
+    "venue": "Proceedings of the KICEM Annual Conference",
+    "venueShort": "KICEM 2025",
+    "type": "conference",
+    "year": 2025,
+    "date": "2025-11",
+    "location": "Jeju, Korea",
+    "pages": "273–274",
+    "status": "Published",
+    "project": "construction-site-quadruped"
+  },
+  {
+    "id": "iccas2025-attention",
+    "title": "Attention-Guided Semantic Navigation Learning from Pose, Goal Text, and Visual via Exponential Reward Functions",
+    "authors": ["I Made Putra Arya Winata", "Donghyun Lee", "Ida Bagus Dwiweka Naratama", "Junghyun Oh"],
+    "venue": "International Conference on Control, Automation and Systems",
+    "venueShort": "ICCAS 2025",
+    "type": "conference",
+    "year": 2025,
+    "date": "2025-11",
+    "location": "Incheon, Korea",
+    "pages": "139–144",
+    "status": "Published",
+    "project": "attention-semantic-navigation"
+  },
+  {
+    "id": "jicros2025-llm",
+    "title": "Leveraging Large Language Model Assistance on Explicit Object Target Prediction and Navigation in Unseen Area",
+    "authors": ["I Made Putra Arya Winata", "Donghyun Lee", "Ida Bagus Dwiweka Naratama", "Junghyun Oh"],
+    "venue": "Journal of Institute of Control, Robotics and Systems",
+    "venueShort": "J. ICROS 2025",
+    "type": "journal",
+    "year": 2025,
+    "date": "2025-08",
+    "volume": "31",
+    "issue": "8",
+    "pages": "888–893",
+    "doi": "10.5302/J.ICROS.2025.25.0102",
+    "status": "Published",
+    "project": "llm-object-navigation"
+  }
+]

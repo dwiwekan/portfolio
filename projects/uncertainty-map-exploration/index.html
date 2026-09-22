@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Uncertainty-Driven Exploration for Object-Goal Navigation | Ida Bagus Dwiweka Naratama</title>
+<meta name="description" content="An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D.">
+<meta name="author" content="Ida Bagus Dwiweka Naratama">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dwiwekan.github.io/portfolio/projects/uncertainty-map-exploration/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ida Bagus Dwiweka Naratama">
+<meta property="og:title" content="Uncertainty-Driven Exploration for Object-Goal Navigation | Ida Bagus Dwiweka Naratama">
+<meta property="og:description" content="An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D.">
+<meta property="og:url" content="https://dwiwekan.github.io/portfolio/projects/uncertainty-map-exploration/">
+<meta property="og:image" content="https://dwiwekan.github.io/portfolio/assets/images/projects/uncertainty-map-exploration/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Uncertainty-Driven Exploration for Object-Goal Navigation | Ida Bagus Dwiweka Naratama">
+<meta name="twitter:description" content="An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D.">
+<meta name="twitter:image" content="https://dwiwekan.github.io/portfolio/assets/images/projects/uncertainty-map-exploration/cover.jpg">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+<link rel="alternate" type="text/plain" href="../../llms.txt" title="Plain-text profile for AI agents">
+<link rel="stylesheet" href="../../assets/design-system/styles.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dwiwekan.github.io/portfolio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://dwiwekan.github.io/portfolio/#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Uncertainty-Driven Exploration for Object-Goal Navigation",
+          "item": "https://dwiwekan.github.io/portfolio/projects/uncertainty-map-exploration/"
+        }
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Transforming Explicit Map Prediction into Uncertainty Exploration for Object Goal Navigation",
+      "name": "Transforming Explicit Map Prediction into Uncertainty Exploration for Object Goal Navigation",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Ida Bagus Dwiweka Naratama"
+        },
+        {
+          "@type": "Person",
+          "name": "I Made Putra Arya Winata"
+        },
+        {
+          "@type": "Person",
+          "name": "Sangcheol Oh"
+        },
+        {
+          "@type": "Person",
+          "name": "Yuri Song"
+        },
+        {
+          "@type": "Person",
+          "name": "Junghyun Oh"
+        }
+      ],
+      "isPartOf": {
+        "@type": "Periodical",
+        "name": "International Journal of Control, Automation, and Systems"
+      },
+      "creativeWorkStatus": "Under revision",
+      "url": "https://dwiwekan.github.io/portfolio/projects/uncertainty-map-exploration/",
+      "abstract": "Object Goal Navigation (ObjectNav) requires an agent to locate a target object in an unseen environment under severe partial observability. While recent modular approaches leverage explicit map prediction to guide goal-directed navigation, they typically rely on a single deterministic predictor, which often produces overconfident estimates and leads to suboptimal exploration in ambiguous regions. In this work, we propose an uncertainty-driven exploration framework that transforms predictive disagreement into an actionable exploration signal. Specifically, we use the empirical variance across target-specific probability maps produced by independently trained semantic map predictors as a practical approximation of epistemic uncertainty. The resulting uncertainty map highlights regions where additional observations are expected to be most informative. To ensure feasibility, we further integrate geodesic reachability using the Fast Marching Method (FMM), yielding a value map that balances information gain and traversal cost. Unlike prior approaches that rely on deterministic semantic prediction or geometry-based frontier heuristics, our method uses predictive disagreement in semantic map completion for long-term goal selection. Experiments on the HM3D benchmark demonstrate that our approach achieves 64.0% SR and 0.3228 SPL, outperforming frontier-based, implicit map, generative map, and deterministic semantic baselines. In addition, our method consistently achieves higher map coverage under identical timestep constraints, indicating more efficient and informative exploration.",
+      "description": "An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D.",
+      "keywords": "Object-goal navigation, Semantic mapping, Deep ensembles, Epistemic uncertainty, Habitat, HM3D, PyTorch",
+      "image": "https://dwiwekan.github.io/portfolio/assets/images/projects/uncertainty-map-exploration/cover.jpg"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <span class="nav-brand"><a href="../../">Dwiweka Naratama</a></span>
+      <a href="../../#projects">Projects</a>
+      <a href="../../#publications">Publications</a>
+      <a href="../../#experience">Experience</a>
+      <a href="../../#education">Education</a>
+      <a href="../../#contact">Contact</a>
+      <a class="btn btn-primary" href="../../cv/">CV</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> / <a href="../../#projects">Projects</a> / Uncertainty-Driven Exploration for Object-Goal Navigation</nav>
+  <article>
+    <header class="project-hero">
+      <p class="eyebrow">IJCAS · Under revision</p>
+      <h1>Uncertainty-Driven Exploration for Object-Goal Navigation</h1>
+      <p class="lede">An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D.</p>
+      <dl class="facts"><div><dt>Venue</dt><dd>IJCAS</dd></div><div><dt>Status</dt><dd>Under revision</dd></div><div><dt>Role</dt><dd>First author</dd></div><div><dt>When</dt><dd>2025 – 2026</dd></div><div><dt>Where</dt><dd>Robotics &amp; AI Lab, Kwangwoon University</dd></div></dl>
+    </header>
+    <div class="project-body">
+      <div>
+        <section class="prose" aria-labelledby="abstract-h">
+          <h2 id="abstract-h">Abstract</h2>
+      <p>Object Goal Navigation (ObjectNav) requires an agent to locate a target object in an unseen environment under severe partial observability. While recent modular approaches leverage explicit map prediction to guide goal-directed navigation, they typically rely on a single deterministic predictor, which often produces overconfident estimates and leads to suboptimal exploration in ambiguous regions.</p>
+      <p>In this work, we propose an uncertainty-driven exploration framework that transforms predictive disagreement into an actionable exploration signal. Specifically, we use the empirical variance across target-specific probability maps produced by independently trained semantic map predictors as a practical approximation of epistemic uncertainty. The resulting uncertainty map highlights regions where additional observations are expected to be most informative. To ensure feasibility, we further integrate geodesic reachability using the Fast Marching Method (FMM), yielding a value map that balances information gain and traversal cost. Unlike prior approaches that rely on deterministic semantic prediction or geometry-based frontier heuristics, our method uses predictive disagreement in semantic map completion for long-term goal selection.</p>
+      <p>Experiments on the HM3D benchmark demonstrate that our approach achieves 64.0% SR and 0.3228 SPL, outperforming frontier-based, implicit map, generative map, and deterministic semantic baselines. In addition, our method consistently achieves higher map coverage under identical timestep constraints, indicating more efficient and informative exploration.</p>
+        </section>
+        <div class="media">
+      <figure>
+        <img src="../../assets/images/projects/uncertainty-map-exploration/method.webp" alt="Pipeline in which observations build a semantic map, multiple map predictors produce object-goal probabilities, uncertainty reasoning selects a frontier, and a distance-weighted waypoint drives the action." width="1600" height="787" loading="lazy" decoding="async">
+        <figcaption>Framework overview. Disagreement across independently trained map predictors becomes an uncertainty map, weighted by geodesic distance to pick the next goal.</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/projects/uncertainty-map-exploration/episodes.webp" alt="RGB observations for target chair, sofa and toilet, each beside the semantic map and predicted goal with the agent&#x27;s path." width="711" height="1060" class="narrow" loading="lazy" decoding="async">
+        <figcaption>Example HM3D episodes (targets chair, sofa and toilet) with the semantic map, prediction and path.</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/projects/uncertainty-map-exploration/uncertainty-map.webp" alt="Top-down map with an uncertainty heatmap and the agent&#x27;s trajectory toward the selected goal." width="688" height="337" loading="lazy" decoding="async">
+        <figcaption>Uncertainty over unexplored space guides the agent&#x27;s long-term goal.</figcaption>
+      </figure>
+        </div>
+      </div>
+      <aside class="aside" aria-label="Project details">
+        <section><h2>Key results</h2><dl class="metrics"><div><dt>64.0%</dt><dd>Success rate on HM3D</dd></div><div><dt>0.3228</dt><dd>SPL</dd></div><div><dt>500</dt><dd>Evaluation episodes</dd></div></dl></section>
+<section><h2>Paper</h2><div class="citation">
+        <p><strong>Transforming Explicit Map Prediction into Uncertainty Exploration for Object Goal Navigation</strong></p>
+        <p><strong>Ida Bagus Dwiweka Naratama</strong>, I Made Putra Arya Winata, Sangcheol Oh, Yuri Song, Junghyun Oh</p>
+        <p><em>International Journal of Control, Automation, and Systems (IJCAS)</em></p>
+        <p><span class="tag status-review">Under revision</span></p>
+      </div></section>
+<section><h2>Topics &amp; tools</h2><ul class="tags"><li class="tag tag-neutral">Object-goal navigation</li><li class="tag tag-neutral">Semantic mapping</li><li class="tag tag-neutral">Deep ensembles</li><li class="tag tag-neutral">Epistemic uncertainty</li><li class="tag tag-neutral">Habitat</li><li class="tag tag-neutral">HM3D</li><li class="tag tag-neutral">PyTorch</li></ul></section>
+      </aside>
+    </div>
+  </article>
+  <nav class="pager" aria-label="More projects"><a class="prev" href="../conformal-scene-graph/"><small>← Previous</small>Graph-Space Conformal Prediction for 3D Scene Graph Completion</a><a class="next" href="../latent-flow-scene-graph/"><small>Next →</small>Latent Flow Matching for 3D Scene Graph Completion (LatentSGC)</a></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Ida Bagus Dwiweka Naratama · Seoul, South Korea</span>
+    <span><a href="mailto:dwiwekan@gmail.com">dwiwekan@gmail.com</a> · <a href="https://github.com/dwiwekan" rel="me">GitHub</a> · <a href="https://www.linkedin.com/in/dwiwekan/" rel="me">LinkedIn</a> · <a href="../../llms.txt">llms.txt</a></span>
+  </div>
+</footer>
+</body>
+</html>

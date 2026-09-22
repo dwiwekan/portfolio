@@ -1,0 +1,300 @@
+[
+  {
+    "slug": "conformal-scene-graph",
+    "category": "research",
+    "title": "Graph-Space Conformal Prediction for 3D Scene Graph Completion",
+    "publication": "aaai2027-conformal",
+    "period": "2026",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "First author",
+    "summary": "Calibrated prediction regions over whole scene-graph hypotheses, reaching 89.95% coverage at a 90% target across 1,015 rooms from HM3D, 3RScan and MP3D.",
+    "abstract": [
+      "Completing a partially observed 3D scene graph is inherently multimodal, as the same observation can admit several structurally different yet plausible hidden scenes. Existing set-valued approaches typically calibrate object and relation predictions independently, which provides component-level guarantees but does not preserve coherent complete-graph hypotheses.",
+      "We propose permutation-invariant graph-space conformal prediction, a post-hoc framework that retains sampled completions as graph hypotheses and calibrates the distance from the ground-truth graph to its nearest sample. A permutation-invariant discrepancy aligns hidden objects before comparing their semantic classes and relations, and split conformal calibration constructs a prediction region as a union of graph-space neighborhoods around the sampled completions. Under exchangeability, the resulting region has finite-sample room-level marginal coverage over hidden-object semantics and relations.",
+      "Across 1,015 rooms from HM3D, 3RScan, and MP3D, empirical coverage tracks targets from 80% to 95%, reaching 89.95% coverage at a 90% target. Increasing the completion budget from 1 to 30 reduces the calibrated radius while preserving near-target coverage, and a shared threshold remains stable across the three datasets."
+    ],
+    "highlights": [
+      { "value": "89.95%", "label": "Coverage at a 90% target" },
+      { "value": "1,015", "label": "Rooms evaluated" },
+      { "value": "3", "label": "Datasets (HM3D, 3RScan, MP3D)" }
+    ],
+    "video": {
+      "src": "assets/videos/conformal-scene-graph.mp4",
+      "poster": "assets/images/projects/conformal-scene-graph/video-poster.jpg",
+      "caption": "Narrated overview (1 min). From a partial room observation, the model proposes 30 completions and calibrates a prediction region around them."
+    },
+    "figures": [
+      { "src": "assets/images/projects/conformal-scene-graph/task-overview.webp", "width": 1440, "height": 1080, "alt": "A robot at a doorway observes part of a room. Several plausible complete-room hypotheses are shown.", "caption": "One partial observation admits several plausible complete rooms." },
+      { "src": "assets/images/projects/conformal-scene-graph/method.webp", "width": 1600, "height": 702, "alt": "Offline calibration and test-time prediction pipeline for graph-space conformal prediction.", "caption": "Offline calibration on rooms with ground-truth graphs, and test-time prediction regions for a new partial scene graph." }
+    ],
+    "tags": ["Conformal prediction", "Uncertainty quantification", "3D scene graphs", "Generative models", "PyTorch"],
+    "links": []
+  },
+  {
+    "slug": "uncertainty-map-exploration",
+    "category": "research",
+    "title": "Uncertainty-Driven Exploration for Object-Goal Navigation",
+    "publication": "ijcas-uncertainty-exploration",
+    "period": "2025 – 2026",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "First author",
+    "summary": "An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D.",
+    "abstract": [
+      "Object Goal Navigation (ObjectNav) requires an agent to locate a target object in an unseen environment under severe partial observability. While recent modular approaches leverage explicit map prediction to guide goal-directed navigation, they typically rely on a single deterministic predictor, which often produces overconfident estimates and leads to suboptimal exploration in ambiguous regions.",
+      "In this work, we propose an uncertainty-driven exploration framework that transforms predictive disagreement into an actionable exploration signal. Specifically, we use the empirical variance across target-specific probability maps produced by independently trained semantic map predictors as a practical approximation of epistemic uncertainty. The resulting uncertainty map highlights regions where additional observations are expected to be most informative. To ensure feasibility, we further integrate geodesic reachability using the Fast Marching Method (FMM), yielding a value map that balances information gain and traversal cost. Unlike prior approaches that rely on deterministic semantic prediction or geometry-based frontier heuristics, our method uses predictive disagreement in semantic map completion for long-term goal selection.",
+      "Experiments on the HM3D benchmark demonstrate that our approach achieves 64.0% SR and 0.3228 SPL, outperforming frontier-based, implicit map, generative map, and deterministic semantic baselines. In addition, our method consistently achieves higher map coverage under identical timestep constraints, indicating more efficient and informative exploration."
+    ],
+    "highlights": [
+      { "value": "64.0%", "label": "Success rate on HM3D" },
+      { "value": "0.3228", "label": "SPL" },
+      { "value": "500", "label": "Evaluation episodes" }
+    ],
+    "figures": [
+      { "src": "assets/images/projects/uncertainty-map-exploration/method.webp", "width": 1600, "height": 787, "alt": "Pipeline in which observations build a semantic map, multiple map predictors produce object-goal probabilities, uncertainty reasoning selects a frontier, and a distance-weighted waypoint drives the action.", "caption": "Framework overview. Disagreement across independently trained map predictors becomes an uncertainty map, weighted by geodesic distance to pick the next goal." },
+      { "src": "assets/images/projects/uncertainty-map-exploration/episodes.webp", "width": 711, "height": 1060, "alt": "RGB observations for target chair, sofa and toilet, each beside the semantic map and predicted goal with the agent's path.", "caption": "Example HM3D episodes (targets chair, sofa and toilet) with the semantic map, prediction and path." },
+      { "src": "assets/images/projects/uncertainty-map-exploration/uncertainty-map.webp", "width": 688, "height": 337, "alt": "Top-down map with an uncertainty heatmap and the agent's trajectory toward the selected goal.", "caption": "Uncertainty over unexplored space guides the agent's long-term goal." }
+    ],
+    "tags": ["Object-goal navigation", "Semantic mapping", "Deep ensembles", "Epistemic uncertainty", "Habitat", "HM3D", "PyTorch"],
+    "links": []
+  },
+  {
+    "slug": "latent-flow-scene-graph",
+    "category": "research",
+    "title": "Latent Flow Matching for 3D Scene Graph Completion (LatentSGC)",
+    "publication": "iccas2026-latentsgc",
+    "period": "2026",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "First author",
+    "summary": "A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines).",
+    "abstract": [
+      "Robots exploring indoor environments often receive only partial observations of the surrounding scene, leaving unobserved objects and spatial relations unknown. We propose LatentSGC, a latent flow matching framework for uncertainty-aware 3D scene graph completion from partial robot observations.",
+      "LatentSGC first uses a Graph Autoencoder to encode scene graphs into per-node latent slots, and then applies Conditional Flow Matching to complete the unobserved slots by integrating a learned ODE conditioned on the observed subgraph. Since each inference run starts from independent Gaussian noise, multiple samples produce diverse yet plausible completions, providing a probabilistic belief over hidden room structures rather than a single deterministic prediction.",
+      "On a benchmark derived from HM3D-Semantics scenes at 30%, 50%, and 70% observation ratios, LatentSGC achieves Node F1 of 0.432 and Edge F1 of 0.255, outperforming deterministic baselines by 0.187 in Node F1 and 0.166 in Edge F1. We further demonstrate the integration of LatentSGC with an RGB-D perception pipeline in Habitat Simulator on rooms unseen during training, where it produces plausible completions of unobserved room structures."
+    ],
+    "highlights": [
+      { "value": "0.432", "label": "Node F1 (baseline 0.245)" },
+      { "value": "0.255", "label": "Edge F1 (baseline 0.089)" },
+      { "value": "30–70%", "label": "Observation ratios tested" }
+    ],
+    "figures": [
+      { "src": "assets/images/projects/latent-flow-scene-graph/habitat-completion.webp", "width": 1440, "height": 609, "alt": "An RGB view of a bedroom beside a 3D scene graph with observed and predicted objects such as bed, chair, shelves and curtain.", "caption": "Integration with an RGB-D pipeline in Habitat, showing observed objects (OBS) and completed, predicted objects (PRED) in an unseen room." },
+      { "src": "assets/images/projects/latent-flow-scene-graph/method.webp", "width": 1231, "height": 607, "alt": "Architecture in which a graph autoencoder encodes the scene graph into latent slots, and conditional flow matching generates the missing slots.", "caption": "Method overview, with (1) a graph autoencoder into per-node latent slots and (2) conditional flow matching over unobserved slots." },
+      { "src": "assets/images/projects/latent-flow-scene-graph/completions.webp", "width": 1600, "height": 843, "alt": "Grid of top-down HM3D scenes with completed scene-graph nodes overlaid.", "caption": "Scene graph completions across HM3D-Semantics scenes." }
+    ],
+    "tags": ["3D scene graphs", "Conditional flow matching", "Graph neural networks", "Generative models", "Habitat", "PyTorch"],
+    "links": []
+  },
+  {
+    "slug": "vq-lama",
+    "category": "research",
+    "title": "VQ-LaMa for Discrete Semantic Map Inpainting",
+    "publication": "kroc2026-vqlama",
+    "period": "2026",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "First author",
+    "summary": "Adds vector quantization to LaMa so semantic-map completion composes walls, corners and corridors from a learned codebook, giving sharper, more consistent maps for exploration.",
+    "abstract": [
+      "Exploration for autonomous embodied agents remains challenging when it must be performed jointly with object-goal navigation. We address this by casting semantic map completion as an inpainting task over partial semantic maps.",
+      "We propose VQ-LaMa, which integrates vector quantization into LaMa to enforce discrete spatial representations. By quantizing the continuous bottleneck to a learned codebook of architectural primitives (e.g., walls, corners, corridors), the model composes predictions from reusable discrete patterns rather than averaging features.",
+      "Evaluated on robotic exploration sequences, VQ-LaMa produces sharper semantic boundaries and more structurally consistent predictions, and its gains increase with available spatial context, indicating that discrete, compositional representations better capture the categorical nature of semantic maps than continuous averaging."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/vq-lama/qualitative.webp", "width": 1600, "height": 954, "alt": "Observed map and final map beside LaMa and VQ-LaMa predictions, with close-ups of object boundaries.", "caption": "Qualitative comparison showing that VQ-LaMa produces sharper semantic boundaries than LaMa." },
+      { "src": "assets/images/projects/vq-lama/method.webp", "width": 1600, "height": 429, "alt": "VQ-LaMa architecture, where the observed semantic map and mask pass through fast Fourier convolutions and a vector-quantized bottleneck to a prediction map.", "caption": "Architecture with a vector-quantized bottleneck inside LaMa's inpainting network." }
+    ],
+    "tags": ["Semantic map prediction", "Image inpainting", "Vector quantization", "Exploration", "PyTorch"],
+    "links": []
+  },
+  {
+    "slug": "construction-site-quadruped",
+    "category": "research",
+    "title": "Simulation Framework for Construction-Site Quadruped Navigation",
+    "publication": "kicem2025-quadruped",
+    "period": "2025",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "First author",
+    "summary": "Isaac Sim + ROS 2 + Nav2 pipeline for repeatable quadruped navigation tests. Tuned parameters reached 100% success over 30 trials per configuration.",
+    "abstract": [
+      "Quadruped robots offer promising mobility for construction-site applications, where uneven terrain, dense obstacles, and narrow passages require reliable and safe navigation. However, existing simulation studies often rely on heterogeneous platforms and ad-hoc evaluation procedures, limiting reproducibility and systematic navigation parameter analysis.",
+      "This study presents an integrated simulation framework for construction-site quadruped navigation by combining NVIDIA Isaac Sim with ROS 2, SLAM Toolbox, Adaptive Monte Carlo Localization (AMCL), and Nav2. The framework provides high-fidelity physics and sensor simulation together with deterministic execution and a modular navigation pipeline for repeatable evaluation.",
+      "To demonstrate its parameter-evaluation capability, three key navigation parameters (obstacle inflation radius, controller frequency, and local costmap update rate) were systematically evaluated through 30 navigation trials per configuration in construction environments containing dense poles and narrow passages. An inflation radius of 0.6 m, controller frequency of 20 Hz, and costmap update rate of 10 Hz achieved 100% navigation success while maintaining comparatively low navigation time, whereas suboptimal configurations reduced success rates to 90–93% or increased completion time. These results demonstrate the framework's ability to support reproducible parameter optimization and systematic validation of quadruped navigation algorithms for construction-site environments."
+    ],
+    "highlights": [
+      { "value": "100%", "label": "Navigation success, tuned configuration" },
+      { "value": "30", "label": "Trials per configuration" },
+      { "value": "90–93%", "label": "Success with suboptimal settings" }
+    ],
+    "figures": [
+      { "src": "assets/images/projects/construction-site-quadruped/isaac-sim.webp", "width": 1280, "height": 712, "alt": "A quadruped robot in an NVIDIA Isaac Sim construction scene beside the RViz costmap view.", "caption": "Quadruped navigation in Isaac Sim with the Nav2 costmap in RViz." },
+      { "src": "assets/images/projects/construction-site-quadruped/site.webp", "width": 452, "height": 800, "alt": "A quadruped robot on an indoor construction site with concrete pillars.", "caption": "The target setting, with dense pillars and narrow passages on a construction site." }
+    ],
+    "tags": ["NVIDIA Isaac Sim", "ROS 2", "Nav2", "SLAM Toolbox", "AMCL", "Quadruped robots"],
+    "links": []
+  },
+  {
+    "slug": "attention-semantic-navigation",
+    "category": "research",
+    "title": "Attention-Guided Semantic Navigation with Exponential Rewards",
+    "publication": "iccas2025-attention",
+    "period": "2025",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "Co-author",
+    "summary": "A confidence module fuses channel and spatial attention over semantic maps with CLIP goal-text and pose embeddings to score frontiers, trained with an exponential coverage reward.",
+    "abstract": [
+      "Object Navigation (ObjectNav) remains a central challenge in embodied AI. Agents must interpret visual cues and natural-language goals to locate objects in previously unseen environments, balancing high-level reasoning with low-level control. While supervised and pretrained model-based methods have demonstrated great performance, they often struggle to prioritize candidate goals effectively at each decision step.",
+      "To address this, we introduce two key contributions. First, a confidence module that joins channel- and spatial-attention over semantic maps with CLIP-based goal-text embeddings and pose embeddings, and refines these joined features via cross-attention to score frontier candidates. Second, an exponential coverage reward function that promotes efficient exploration and stabilizes reinforcement-learning training. Channel attention aggregates per-channel statistics to recalibrate feature importance, spatial attention highlights critical regions, and pose and textual embeddings guide goal selection, and a subsequent cross-attention layer produces confidence scores for frontier edges.",
+      "Empirical evaluations on standard ObjectNav benchmarks demonstrate significant gains in Success Rate and Success weighted by Path Length over competitive baselines. Ablation studies confirm that both the attention-based fusion and exponential reward are pivotal to these improvements."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/attention-semantic-navigation/method.webp", "width": 986, "height": 478, "alt": "Architecture in which RGB-D and pose build a semantic map, and image, pose and CLIP text encoders feed a confidence module that selects the goal for low-level action.", "caption": "Confidence module combining semantic-map, pose and CLIP goal-text features to select frontier goals." }
+    ],
+    "tags": ["Object-goal navigation", "Attention", "CLIP", "Reinforcement learning", "Reward shaping", "PyTorch"],
+    "links": []
+  },
+  {
+    "slug": "llm-object-navigation",
+    "category": "research",
+    "title": "LLM-Assisted Object Target Prediction for Navigation",
+    "publication": "jicros2025-llm",
+    "period": "2025",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "Co-author",
+    "summary": "GPT-4o validates Mask R-CNN object predictions before they enter the semantic map, filtering false positives and improving success rate and trajectory efficiency on HM3D.",
+    "abstract": [
+      "Object-based goal navigation tasks require embodied agents to locate specified objects in unfamiliar environments, a key challenge in vision-language navigation. Several works use end-to-end models to project observations into actions, but they often suffer from poor interpretability. Conversely, modular approaches provide interpretability by separating perception, planning, and action.",
+      "There is a notable modular framework that predicts object locations in unexplored areas via supervised learning. However, it is prone to false positives, which can degrade navigation performance. In this work, we propose an enhanced method that integrates large language model assistance into the object prediction pipeline. Specifically, we introduce a validation step that uses GPT-4o to confirm the existence of objects predicted using a mask region-based convolutional neural network (Mask R-CNN) before retrieving them in semantic maps. This validation effectively filters false positives, leading to more accurate goal identification.",
+      "Experiments on the HM3D dataset demonstrate improved success rates and trajectory efficiency, validating the effectiveness of our approach in complex indoor navigation scenarios."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/llm-object-navigation/llm-validation.webp", "width": 583, "height": 396, "alt": "Mask R-CNN predicts a bed, the LLM is asked whether it sees a bed and answers no, so the prediction is removed.", "caption": "LLM validation rejects a false-positive “bed” from Mask R-CNN before it reaches the map." },
+      { "src": "assets/images/projects/llm-object-navigation/method.webp", "width": 1569, "height": 597, "alt": "Pipeline from observation through semantic mapping with LLM assistance, explicit object prediction, distance weighting and goal selection.", "caption": "Navigation policy with an LLM-assisted semantic mapping step." }
+    ],
+    "tags": ["Vision-language navigation", "LLMs", "GPT-4o", "Mask R-CNN", "Semantic mapping", "HM3D"],
+    "links": [
+      { "label": "Read the paper (DOI)", "url": "https://doi.org/10.5302/J.ICROS.2025.25.0102" }
+    ]
+  },
+  {
+    "slug": "scout-mini-scene-graph",
+    "category": "engineering",
+    "coverFit": "cover",
+    "title": "Open-Set 3D Scene Graphs on a Mobile Robot",
+    "period": "Kwangwoon University",
+    "context": "Robotics & AI Lab, Kwangwoon University",
+    "role": "Robotics engineer",
+    "summary": "Reimplemented a task-driven open-set 3D scene graph pipeline and deployed it on an AgileX Scout Mini with ROS 2 and Nav2.",
+    "abstract": [
+      "Research on 3D scene graphs is usually evaluated in simulation. This project took a task-driven, open-set 3D scene graph pipeline onto real hardware. I reimplemented the pipeline and deployed it on an AgileX Scout Mini mobile robot, integrated with ROS 2 and the Nav2 navigation stack."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/scout-mini-scene-graph/robot.webp", "width": 450, "height": 800, "alt": "An AgileX Scout Mini robot with sensors and an on-board laptop in a corridor.", "caption": "The AgileX Scout Mini platform used for deployment." }
+    ],
+    "tags": ["ROS 2", "Nav2", "3D scene graphs", "Open-set perception", "AgileX Scout Mini"],
+    "links": []
+  },
+  {
+    "slug": "text-summarization",
+    "category": "engineering",
+    "title": "Text Summarization with Textual Entailment",
+    "period": "Mar 2023",
+    "context": "Undergraduate thesis, Udayana University",
+    "role": "Sole developer",
+    "summary": "My undergraduate thesis, an extractive summarizer driven by a natural-language-inference model and served as a Flask web app.",
+    "abstract": [
+      "My undergraduate thesis at Udayana University, an extractive text summarizer built on natural language inference. A textual-entailment model trained on SNLI (after Bowman et al., 2015, with 76% test accuracy) scores sentence pairs, and the highest-ranked sentences are assembled into a coherent summary. It was tested at summarization ratios of 30–60%.",
+      "The model is served through a Flask back end with an HTML, CSS and JavaScript front end, deployed on Fly.io."
+    ],
+    "highlights": [
+      { "value": "76%", "label": "NLI test accuracy" },
+      { "value": "30–60%", "label": "Summarization ratios tested" }
+    ],
+    "figures": [
+      { "src": "assets/images/projects/text-summarization/overview.webp", "width": 1280, "height": 720, "alt": "Project overview slide for the Text Summarize Application with web screenshots and a system diagram.", "caption": "Project overview with the web application and system design." }
+    ],
+    "tags": ["NLP", "Natural language inference", "TensorFlow", "Keras", "NLTK", "Flask"],
+    "links": [
+      { "label": "Live demo", "url": "https://dwiwekan.github.io/textualsummarizationweb/" },
+      { "label": "Source code", "url": "https://github.com/dwiwekan/textualsummarizationweb" }
+    ]
+  },
+  {
+    "slug": "tanam-in",
+    "category": "engineering",
+    "title": "Tanam.in, a Gardening App with Plant Recognition",
+    "period": "Jul 2022",
+    "context": "Team project, Udayana University",
+    "role": "Machine learning",
+    "summary": "Android gardening-education app on Google Cloud. Transfer-learning models identify vegetables and fruits and detect tomato and chili leaf diseases.",
+    "abstract": [
+      "Tanam.in is a gardening education platform with AI features. The Android application connects to APIs on Google Cloud Platform. Transfer-learning models identify vegetables and fruits, and detect common diseases on tomato and chili leaves."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/tanam-in/overview.webp", "width": 1280, "height": 720, "alt": "Project overview slide for Tanam.in with app screens, architecture and plant images.", "caption": "Project overview with the Android app, cloud architecture and image models." }
+    ],
+    "tags": ["TensorFlow", "Transfer learning", "Image classification", "Google Cloud Platform", "Android"],
+    "links": []
+  },
+  {
+    "slug": "information-retrieval",
+    "category": "engineering",
+    "title": "Information Retrieval Application",
+    "period": "Nov 2021",
+    "context": "Course project, Udayana University",
+    "role": "Developer",
+    "summary": "Desktop search engine over text documents combining Boolean queries, TF-IDF, Jaccard, n-grams, cosine distance and the extended Boolean model.",
+    "abstract": [
+      "A desktop information retrieval application for text analysis. It combines Boolean queries, TF-IDF, Jaccard similarity, n-grams, cosine distance and the extended Boolean model to score keyword similarity across a corpus of text documents, with a Qt interface built in Qt Designer."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/information-retrieval/overview.webp", "width": 1280, "height": 720, "alt": "Project overview slide for the Information Retrieval Application with interface screenshots.", "caption": "Project overview and application interface." }
+    ],
+    "tags": ["Information retrieval", "TF-IDF", "NLTK", "Sastrawi", "scikit-learn", "PyQt5"],
+    "links": [
+      { "label": "Source code", "url": "https://github.com/dwiwekan/Extended-Boolean-Model" }
+    ]
+  },
+  {
+    "slug": "computer-vision-app",
+    "category": "engineering",
+    "title": "Computer Vision Toolkit",
+    "period": "Nov 2021",
+    "context": "Course project, Udayana University",
+    "role": "Developer",
+    "summary": "Desktop image-processing app for thresholding, morphology, Sobel, Laplacian and Canny edge detection, plus line and circle detection.",
+    "abstract": [
+      "A desktop computer vision application covering negation, thresholding, rotation, erosion and dilation, edge detection (Sobel X, Sobel Y, Laplacian, Canny), and line and circle detection. The interface was built with Qt Designer, with a Python back end using OpenCV."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/computer-vision-app/overview.webp", "width": 1280, "height": 720, "alt": "Project overview slide for the Computer Vision Application with screenshots of road images processed by edge detection.", "caption": "Project overview and application interface." }
+    ],
+    "tags": ["OpenCV", "Image processing", "Edge detection", "PyQt5", "Python"],
+    "links": [
+      { "label": "Source code", "url": "https://github.com/dwiwekan/Computer-Vision-Midtest" }
+    ]
+  },
+  {
+    "slug": "food-sentiment-analysis",
+    "category": "engineering",
+    "title": "Food Sentiment Analysis with the Twitter API",
+    "period": "Jun 2021",
+    "context": "Course project, Udayana University",
+    "role": "Developer",
+    "summary": "End-to-end big-data pipeline that collects tweets about popular Indonesian dishes via the Twitter API, stores them in MongoDB, scores them with TextBlob and visualises the results in Tableau.",
+    "abstract": [
+      "An end-to-end big-data project measuring sentiment about Indonesia's most popular dishes. Tweets were collected with the Twitter API, ingested into MongoDB Atlas, translated and scored with TextBlob sentiment analysis, and the findings were presented in Tableau."
+    ],
+    "highlights": [],
+    "figures": [
+      { "src": "assets/images/projects/food-sentiment-analysis/overview.webp", "width": 1280, "height": 720, "alt": "Project overview slide for Food Sentiment Analysis with notebook code, charts and a Tableau dashboard.", "caption": "Project overview covering data collection, ingestion and Tableau analysis." }
+    ],
+    "tags": ["Sentiment analysis", "Twitter API", "MongoDB", "TextBlob", "Tableau", "Pandas"],
+    "links": []
+  }
+]

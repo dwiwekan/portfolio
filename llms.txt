@@ -1,19 +1,78 @@
 # Ida Bagus Dwiweka Naratama
 
-> Master's student in AI and robotics. Research in embodied AI: object-goal navigation, uncertainty-aware exploration, and 3D scene graphs.
+> M.S. Candidate in Robotics, Kwangwoon University. Robotics and AI researcher building perception, spatial-reasoning and navigation systems for mobile robots, covering computer vision, multimodal and generative AI, 3D scene understanding, SLAM and autonomous navigation, from model development to deployment on real robots.
 
 - Email: dwiwekan@gmail.com
+- Website: https://dwiwekan.github.io/portfolio/
+- CV (HTML): https://dwiwekan.github.io/portfolio/cv/
+- CV (PDF): https://dwiwekan.github.io/portfolio/assets/documents/Ida-Bagus-Dwiweka-Naratama-CV.pdf
 - GitHub: https://github.com/dwiwekan
 - LinkedIn: https://www.linkedin.com/in/dwiwekan/
+- Structured data (JSON): https://dwiwekan.github.io/portfolio/data/profile.json, https://dwiwekan.github.io/portfolio/data/projects.json, https://dwiwekan.github.io/portfolio/data/publications.json
+- Location: Seoul, South Korea
 
-## Research interests
-Object-goal navigation; 3D scene graphs; uncertainty estimation for exploration; learned navigation policies and sim-to-real transfer.
+## At a glance
+- Projects: 13
+- Publications: 7 (5 first-author)
+- Experience: 4+ years (since Jul 2022)
+- Status: M.S. candidate in Robotics, graduating Feb 2027
+- Availability: Open to research and industry roles from Feb 2027
+
+## Education
+- M.S. in Robotics, Kwangwoon University, Seoul, South Korea. Feb 2025 – Feb 2027 (expected). GPA 4.5 / 4.5. Advised by Prof. Junghyun Oh, Robotics & AI Lab.
+- Bachelor's in Information Technology, Udayana University, Bali, Indonesia. Aug 2019 – Apr 2023. GPA 3.93 / 4.0, cum laude. Thesis on extractive text summarization using a textual entailment approach based on deep learning.
+
+## Experience
+- Graduate Researcher, Robotics & AI Lab (RAIL), Kwangwoon University, Seoul, South Korea. Feb 2025 – Present.
+  - Research on AI-based perception, spatial reasoning and navigation for mobile robots.
+  - Built an uncertainty-aware object-goal navigation framework with ensemble semantic-map prediction and exploration planning, reaching a 64.0% success rate across 500 HM3D episodes and outperforming deterministic semantic baselines.
+  - Developed LatentSGC (graph neural networks + conditional flow matching) for generative 3D scene graph completion, raising node F1 from 0.245 to 0.432 and edge F1 from 0.089 to 0.255 over deterministic baselines.
+  - Reimplemented a task-driven open-set 3D scene graph pipeline and deployed it on an AgileX Scout Mini with ROS 2 and Nav2.
+  - Built reproducible simulation pipelines with NVIDIA Isaac Sim, ROS 2, SLAM Toolbox, AMCL and Nav2, where selected configurations reached 100% navigation success across repeated construction-site trials.
+- AI Engineer, PukulEnam.ai, Bali, Indonesia. Jan 2024 – Sep 2024.
+  - Built a Llama 3 virtual teaching assistant with edge deployment on an NVIDIA Jetson Nano, and LLM applications using retrieval-augmented generation (RAG) and the OpenAI API.
+  - Increased the frame rate of DICOM medical image sequences with FiNNiGAN and SRGAN super-resolution, outperforming interpolation.
+  - Built a custom U-Net for anomaly detection on ACDC 2017 (cross-entropy, focal, Dice and Lovász losses) and applied the OWAD framework to malware anomaly detection, benchmarked against random forest and decision tree models.
+- NLP Researcher (Professor's Assistant), Udayana University, Bali, Indonesia. Jul 2022 – Mar 2023.
+  - Adapted the SNLI natural-language-inference dataset to Indonesian.
+  - Built NLI models with BiLSTM, self-attention and multi-head attention using Stanza, FastText, GloVe, Word2Vec and BERT.
+
+## Teaching & mentoring
+- Machine Learning Path Mentor, Bangkit Academy, Indonesia. Feb 2023 – Jul 2024.
+  - Mentored 75 students across three cohorts of 25 in the machine learning path.
+  - Coordinated in-person instructor-led training sessions.
+  - Recognised as “Study Squad Dynamo” and “Energetic Guide Mentor”.
+- Machine Learning Mentor, Indonesia AI, Depok, Indonesia. Feb 2024 – Aug 2024.
+  - Taught time-series forecasting (ARIMA, LSTM) across 12 classes for 20 participants, with one-on-one mentoring sessions.
 
 ## Publications
-- Latent flow matching for uncertainty-aware 3D scene graph completion from partial robot observations. ICCAS 2026. First author. Case study: /portfolio/Project-SceneGraph.dc.html
-- Transforming explicit map prediction into uncertainty exploration for object goal navigation. IJCAS 2026. First author. Case study: /portfolio/Project-MapPrediction.dc.html
-- Attention-guided semantic navigation learning from pose, goal text and visual input via exponential reward functions. IJCAS 2025. Second author. Case study: /portfolio/Project-AttentionNav.dc.html
+- Permutation-Invariant Graph-Space Conformal Prediction for 3D Scene Graph Completion. Ida Bagus Dwiweka Naratama, Junghyun Oh. AAAI Conference on Artificial Intelligence (AAAI 2027). Under review. First author. Abstract: https://dwiwekan.github.io/portfolio/projects/conformal-scene-graph/
+- Transforming Explicit Map Prediction into Uncertainty Exploration for Object Goal Navigation. Ida Bagus Dwiweka Naratama, I Made Putra Arya Winata, Sangcheol Oh, Yuri Song, Junghyun Oh. International Journal of Control, Automation, and Systems (IJCAS). Under revision. First author. Abstract: https://dwiwekan.github.io/portfolio/projects/uncertainty-map-exploration/
+- Latent Flow Matching for Uncertainty-Aware 3D Scene Graph Completion from Partial Robot Observations. Ida Bagus Dwiweka Naratama, I Made Putra Arya Winata, Junghyun Oh. International Conference on Control, Automation and Systems (ICCAS 2026). Accepted. First author. Abstract: https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/
+- VQ-LaMa: Discrete Semantic Map Inpainting for Efficient Exploration. Ida Bagus Dwiweka Naratama, I Made Putra Arya Winata, Yuri Song, Junghyun Oh. Korea Robotics Society Annual Conference (KRoC 2026), pp. 858–860, Feb 2026. Published. First author. Abstract: https://dwiwekan.github.io/portfolio/projects/vq-lama/
+- Integrated Simulation Framework for Construction-Site Quadruped Navigation. Ida Bagus Dwiweka Naratama, Yuri Song, Junghyun Oh. Proceedings of the KICEM Annual Conference (KICEM 2025), Jeju, Korea, pp. 273–274, Nov 2025. Published. First author. Abstract: https://dwiwekan.github.io/portfolio/projects/construction-site-quadruped/
+- Attention-Guided Semantic Navigation Learning from Pose, Goal Text, and Visual via Exponential Reward Functions. I Made Putra Arya Winata, Donghyun Lee, Ida Bagus Dwiweka Naratama, Junghyun Oh. International Conference on Control, Automation and Systems (ICCAS 2025), Incheon, Korea, pp. 139–144, Nov 2025. Published. Author 3 of 4. Abstract: https://dwiwekan.github.io/portfolio/projects/attention-semantic-navigation/
+- Leveraging Large Language Model Assistance on Explicit Object Target Prediction and Navigation in Unseen Area. I Made Putra Arya Winata, Donghyun Lee, Ida Bagus Dwiweka Naratama, Junghyun Oh. Journal of Institute of Control, Robotics and Systems (J. ICROS 2025), vol. 31, no. 8, pp. 888–893, Aug 2025. Published. Author 3 of 4. DOI: 10.5302/J.ICROS.2025.25.0102. Abstract: https://dwiwekan.github.io/portfolio/projects/llm-object-navigation/
 
-## Pages
-- Portfolio (home): /portfolio/
-- CV (print-ready): /portfolio/CV.dc.html
+## Projects
+- Graph-Space Conformal Prediction for 3D Scene Graph Completion (research, 2026; First author). Calibrated prediction regions over whole scene-graph hypotheses, reaching 89.95% coverage at a 90% target across 1,015 rooms from HM3D, 3RScan and MP3D. https://dwiwekan.github.io/portfolio/projects/conformal-scene-graph/
+- Uncertainty-Driven Exploration for Object-Goal Navigation (research, 2025 – 2026; First author). An ensemble of semantic-map predictors turns disagreement over unseen space into an exploration signal, reaching a 64.0% success rate and 0.3228 SPL on HM3D. https://dwiwekan.github.io/portfolio/projects/uncertainty-map-exploration/
+- Latent Flow Matching for 3D Scene Graph Completion (LatentSGC) (research, 2026; First author). A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines). https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/
+- VQ-LaMa for Discrete Semantic Map Inpainting (research, 2026; First author). Adds vector quantization to LaMa so semantic-map completion composes walls, corners and corridors from a learned codebook, giving sharper, more consistent maps for exploration. https://dwiwekan.github.io/portfolio/projects/vq-lama/
+- Simulation Framework for Construction-Site Quadruped Navigation (research, 2025; First author). Isaac Sim + ROS 2 + Nav2 pipeline for repeatable quadruped navigation tests. Tuned parameters reached 100% success over 30 trials per configuration. https://dwiwekan.github.io/portfolio/projects/construction-site-quadruped/
+- Attention-Guided Semantic Navigation with Exponential Rewards (research, 2025; Co-author). A confidence module fuses channel and spatial attention over semantic maps with CLIP goal-text and pose embeddings to score frontiers, trained with an exponential coverage reward. https://dwiwekan.github.io/portfolio/projects/attention-semantic-navigation/
+- LLM-Assisted Object Target Prediction for Navigation (research, 2025; Co-author). GPT-4o validates Mask R-CNN object predictions before they enter the semantic map, filtering false positives and improving success rate and trajectory efficiency on HM3D. https://dwiwekan.github.io/portfolio/projects/llm-object-navigation/
+- Open-Set 3D Scene Graphs on a Mobile Robot (engineering, Kwangwoon University; Robotics engineer). Reimplemented a task-driven open-set 3D scene graph pipeline and deployed it on an AgileX Scout Mini with ROS 2 and Nav2. https://dwiwekan.github.io/portfolio/projects/scout-mini-scene-graph/
+- Text Summarization with Textual Entailment (engineering, Mar 2023; Sole developer). My undergraduate thesis, an extractive summarizer driven by a natural-language-inference model and served as a Flask web app. https://dwiwekan.github.io/portfolio/projects/text-summarization/
+- Tanam.in, a Gardening App with Plant Recognition (engineering, Jul 2022; Machine learning). Android gardening-education app on Google Cloud. Transfer-learning models identify vegetables and fruits and detect tomato and chili leaf diseases. https://dwiwekan.github.io/portfolio/projects/tanam-in/
+- Information Retrieval Application (engineering, Nov 2021; Developer). Desktop search engine over text documents combining Boolean queries, TF-IDF, Jaccard, n-grams, cosine distance and the extended Boolean model. https://dwiwekan.github.io/portfolio/projects/information-retrieval/
+- Computer Vision Toolkit (engineering, Nov 2021; Developer). Desktop image-processing app for thresholding, morphology, Sobel, Laplacian and Canny edge detection, plus line and circle detection. https://dwiwekan.github.io/portfolio/projects/computer-vision-app/
+- Food Sentiment Analysis with the Twitter API (engineering, Jun 2021; Developer). End-to-end big-data pipeline that collects tweets about popular Indonesian dishes via the Twitter API, stores them in MongoDB, scores them with TextBlob and visualises the results in Tableau. https://dwiwekan.github.io/portfolio/projects/food-sentiment-analysis/
+
+## Skills
+- Machine learning: PyTorch, Transformers, LLMs, VLMs, Generative modelling, Computer vision
+- Robotics: ROS 2, Nav2, SLAM, AMCL, Robot perception, Autonomous navigation
+- Simulation: NVIDIA Isaac Sim, Gazebo, Habitat
+- Programming: Python, C++, SQL
+- Tools: Git, Linux, Docker, CUDA
+- Languages: English (professional), Indonesian (native)

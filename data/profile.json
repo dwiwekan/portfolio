@@ -1,0 +1,206 @@
+{
+  "name": "Ida Bagus Dwiweka Naratama",
+  "shortName": "Dwiweka Naratama",
+  "givenName": "Ida Bagus Dwiweka",
+  "familyName": "Naratama",
+  "headline": "Robotics & AI Researcher",
+  "currentRole": "M.S. Candidate in Robotics, Kwangwoon University",
+  "location": {
+    "city": "Seoul",
+    "country": "South Korea",
+    "countryCode": "KR"
+  },
+  "email": "dwiwekan@gmail.com",
+  "siteUrl": "https://dwiwekan.github.io/portfolio/",
+  "links": [
+    {
+      "label": "GitHub",
+      "url": "https://github.com/dwiwekan"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/dwiwekan/"
+    }
+  ],
+  "portrait": "assets/images/profile/portrait.jpg",
+  "summary": "Robotics and AI researcher building perception, spatial-reasoning and navigation systems for mobile robots, covering computer vision, multimodal and generative AI, 3D scene understanding, SLAM and autonomous navigation, from model development to deployment on real robots.",
+  "intro": "I build AI that helps robots see, reason about and find their way through the physical world, from computer vision, multimodal and generative AI and 3D scene understanding to SLAM and autonomous navigation. My work usually starts in simulation and ends on a real robot, which is where I learn everything the simulation politely forgot to mention. I’m still learning every day, and the robots make sure of that.",
+  "availability": "Open to research and industry roles from Feb 2027",
+  "contactNote": "Whether it’s a research collaboration, a role on your team, or a robot that refuses to leave the hallway, I’d be glad to hear from you. Email is the fastest way to reach me.",
+  "focusAreas": [
+    "Computer vision",
+    "Multimodal & generative AI",
+    "3D scene understanding",
+    "SLAM & autonomous navigation",
+    "Real-robot deployment"
+  ],
+  "keywords": [
+    "robotics",
+    "embodied AI",
+    "computer vision",
+    "multimodal AI",
+    "generative AI",
+    "3D scene graph",
+    "scene understanding",
+    "SLAM",
+    "autonomous navigation",
+    "object goal navigation",
+    "uncertainty estimation",
+    "flow matching",
+    "conformal prediction",
+    "ROS 2",
+    "Nav2",
+    "NVIDIA Isaac Sim",
+    "PyTorch",
+    "LLM"
+  ],
+  "careerStart": "2022-07",
+  "experience": [
+    {
+      "title": "Graduate Researcher",
+      "organization": "Robotics & AI Lab (RAIL), Kwangwoon University",
+      "location": "Seoul, South Korea",
+      "start": "2025-02",
+      "end": null,
+      "highlights": [
+        "Research on AI-based perception, spatial reasoning and navigation for mobile robots.",
+        "Built an uncertainty-aware object-goal navigation framework with ensemble semantic-map prediction and exploration planning, reaching a 64.0% success rate across 500 HM3D episodes and outperforming deterministic semantic baselines.",
+        "Developed LatentSGC (graph neural networks + conditional flow matching) for generative 3D scene graph completion, raising node F1 from 0.245 to 0.432 and edge F1 from 0.089 to 0.255 over deterministic baselines.",
+        "Reimplemented a task-driven open-set 3D scene graph pipeline and deployed it on an AgileX Scout Mini with ROS 2 and Nav2.",
+        "Built reproducible simulation pipelines with NVIDIA Isaac Sim, ROS 2, SLAM Toolbox, AMCL and Nav2, where selected configurations reached 100% navigation success across repeated construction-site trials."
+      ]
+    },
+    {
+      "title": "AI Engineer",
+      "organization": "PukulEnam.ai",
+      "location": "Bali, Indonesia",
+      "start": "2024-01",
+      "end": "2024-09",
+      "highlights": [
+        "Built a Llama 3 virtual teaching assistant with edge deployment on an NVIDIA Jetson Nano, and LLM applications using retrieval-augmented generation (RAG) and the OpenAI API.",
+        "Increased the frame rate of DICOM medical image sequences with FiNNiGAN and SRGAN super-resolution, outperforming interpolation.",
+        "Built a custom U-Net for anomaly detection on ACDC 2017 (cross-entropy, focal, Dice and Lovász losses) and applied the OWAD framework to malware anomaly detection, benchmarked against random forest and decision tree models."
+      ]
+    },
+    {
+      "title": "NLP Researcher (Professor's Assistant)",
+      "organization": "Udayana University",
+      "location": "Bali, Indonesia",
+      "start": "2022-07",
+      "end": "2023-03",
+      "highlights": [
+        "Adapted the SNLI natural-language-inference dataset to Indonesian.",
+        "Built NLI models with BiLSTM, self-attention and multi-head attention using Stanza, FastText, GloVe, Word2Vec and BERT."
+      ]
+    }
+  ],
+  "teaching": [
+    {
+      "title": "Machine Learning Path Mentor",
+      "organization": "Bangkit Academy",
+      "location": "Indonesia",
+      "start": "2023-02",
+      "end": "2024-07",
+      "highlights": [
+        "Mentored 75 students across three cohorts of 25 in the machine learning path.",
+        "Coordinated in-person instructor-led training sessions.",
+        "Recognised as “Study Squad Dynamo” and “Energetic Guide Mentor”."
+      ]
+    },
+    {
+      "title": "Machine Learning Mentor",
+      "organization": "Indonesia AI",
+      "location": "Depok, Indonesia",
+      "start": "2024-02",
+      "end": "2024-08",
+      "highlights": [
+        "Taught time-series forecasting (ARIMA, LSTM) across 12 classes for 20 participants, with one-on-one mentoring sessions."
+      ]
+    }
+  ],
+  "education": [
+    {
+      "degree": "M.S. in Robotics",
+      "institution": "Kwangwoon University",
+      "location": "Seoul, South Korea",
+      "start": "2025-02",
+      "end": "2027-02",
+      "expected": true,
+      "details": [
+        "GPA 4.5 / 4.5",
+        "Advised by Prof. Junghyun Oh, Robotics & AI Lab"
+      ]
+    },
+    {
+      "degree": "Bachelor's in Information Technology",
+      "institution": "Udayana University",
+      "location": "Bali, Indonesia",
+      "start": "2019-08",
+      "end": "2023-04",
+      "expected": false,
+      "details": [
+        "GPA 3.93 / 4.0, cum laude",
+        "Thesis on extractive text summarization using a textual entailment approach based on deep learning"
+      ]
+    }
+  ],
+  "skills": [
+    {
+      "category": "Machine learning",
+      "items": [
+        "PyTorch",
+        "Transformers",
+        "LLMs",
+        "VLMs",
+        "Generative modelling",
+        "Computer vision"
+      ]
+    },
+    {
+      "category": "Robotics",
+      "items": [
+        "ROS 2",
+        "Nav2",
+        "SLAM",
+        "AMCL",
+        "Robot perception",
+        "Autonomous navigation"
+      ]
+    },
+    {
+      "category": "Simulation",
+      "items": [
+        "NVIDIA Isaac Sim",
+        "Gazebo",
+        "Habitat"
+      ]
+    },
+    {
+      "category": "Programming",
+      "items": [
+        "Python",
+        "C++",
+        "SQL"
+      ]
+    },
+    {
+      "category": "Tools",
+      "items": [
+        "Git",
+        "Linux",
+        "Docker",
+        "CUDA"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "English",
+      "level": "Professional"
+    },
+    {
+      "language": "Indonesian",
+      "level": "Native"
+    }
+  ]
+}

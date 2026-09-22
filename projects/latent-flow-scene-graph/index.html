@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Latent Flow Matching for 3D Scene Graph Completion (LatentSGC) | Ida Bagus Dwiweka Naratama</title>
+<meta name="description" content="A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines).">
+<meta name="author" content="Ida Bagus Dwiweka Naratama">
+<meta name="robots" content="index, follow">
+<link rel="canonical" href="https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/">
+<meta property="og:type" content="article">
+<meta property="og:site_name" content="Ida Bagus Dwiweka Naratama">
+<meta property="og:title" content="Latent Flow Matching for 3D Scene Graph Completion (LatentSGC) | Ida Bagus Dwiweka Naratama">
+<meta property="og:description" content="A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines).">
+<meta property="og:url" content="https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/">
+<meta property="og:image" content="https://dwiwekan.github.io/portfolio/assets/images/projects/latent-flow-scene-graph/cover.jpg">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Latent Flow Matching for 3D Scene Graph Completion (LatentSGC) | Ida Bagus Dwiweka Naratama">
+<meta name="twitter:description" content="A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines).">
+<meta name="twitter:image" content="https://dwiwekan.github.io/portfolio/assets/images/projects/latent-flow-scene-graph/cover.jpg">
+<link rel="icon" href="../../assets/icons/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="../../assets/icons/favicon-32.png" type="image/png" sizes="32x32">
+<link rel="apple-touch-icon" href="../../assets/icons/apple-touch-icon.png">
+<link rel="alternate" type="text/plain" href="../../llms.txt" title="Plain-text profile for AI agents">
+<link rel="stylesheet" href="../../assets/design-system/styles.css">
+<link rel="stylesheet" href="../../assets/css/site.css">
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@graph": [
+    {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://dwiwekan.github.io/portfolio/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Projects",
+          "item": "https://dwiwekan.github.io/portfolio/#projects"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Latent Flow Matching for 3D Scene Graph Completion (LatentSGC)",
+          "item": "https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/"
+        }
+      ]
+    },
+    {
+      "@type": "ScholarlyArticle",
+      "headline": "Latent Flow Matching for Uncertainty-Aware 3D Scene Graph Completion from Partial Robot Observations",
+      "name": "Latent Flow Matching for Uncertainty-Aware 3D Scene Graph Completion from Partial Robot Observations",
+      "author": [
+        {
+          "@type": "Person",
+          "name": "Ida Bagus Dwiweka Naratama"
+        },
+        {
+          "@type": "Person",
+          "name": "I Made Putra Arya Winata"
+        },
+        {
+          "@type": "Person",
+          "name": "Junghyun Oh"
+        }
+      ],
+      "isPartOf": {
+        "@type": "Event",
+        "name": "International Conference on Control, Automation and Systems"
+      },
+      "creativeWorkStatus": "Accepted",
+      "datePublished": "2026",
+      "url": "https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/",
+      "abstract": "Robots exploring indoor environments often receive only partial observations of the surrounding scene, leaving unobserved objects and spatial relations unknown. We propose LatentSGC, a latent flow matching framework for uncertainty-aware 3D scene graph completion from partial robot observations. LatentSGC first uses a Graph Autoencoder to encode scene graphs into per-node latent slots, and then applies Conditional Flow Matching to complete the unobserved slots by integrating a learned ODE conditioned on the observed subgraph. Since each inference run starts from independent Gaussian noise, multiple samples produce diverse yet plausible completions, providing a probabilistic belief over hidden room structures rather than a single deterministic prediction. On a benchmark derived from HM3D-Semantics scenes at 30%, 50%, and 70% observation ratios, LatentSGC achieves Node F1 of 0.432 and Edge F1 of 0.255, outperforming deterministic baselines by 0.187 in Node F1 and 0.166 in Edge F1. We further demonstrate the integration of LatentSGC with an RGB-D perception pipeline in Habitat Simulator on rooms unseen during training, where it produces plausible completions of unobserved room structures.",
+      "description": "A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines).",
+      "keywords": "3D scene graphs, Conditional flow matching, Graph neural networks, Generative models, Habitat, PyTorch",
+      "image": "https://dwiwekan.github.io/portfolio/assets/images/projects/latent-flow-scene-graph/cover.jpg"
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+<header class="site-header">
+  <div class="wrap">
+    <nav class="nav" aria-label="Main">
+      <span class="nav-brand"><a href="../../">Dwiweka Naratama</a></span>
+      <a href="../../#projects">Projects</a>
+      <a href="../../#publications">Publications</a>
+      <a href="../../#experience">Experience</a>
+      <a href="../../#education">Education</a>
+      <a href="../../#contact">Contact</a>
+      <a class="btn btn-primary" href="../../cv/">CV</a>
+    </nav>
+  </div>
+</header>
+<main id="main">
+<div class="wrap">
+  <nav class="crumbs" aria-label="Breadcrumb"><a href="../../">Home</a> / <a href="../../#projects">Projects</a> / Latent Flow Matching for 3D Scene Graph Completion (LatentSGC)</nav>
+  <article>
+    <header class="project-hero">
+      <p class="eyebrow">ICCAS 2026 · Accepted</p>
+      <h1>Latent Flow Matching for 3D Scene Graph Completion (LatentSGC)</h1>
+      <p class="lede">A graph autoencoder with conditional flow matching completes unobserved objects and relations, reaching node F1 0.432 and edge F1 0.255 (+0.187 and +0.166 over deterministic baselines).</p>
+      <dl class="facts"><div><dt>Venue</dt><dd>ICCAS 2026</dd></div><div><dt>Status</dt><dd>Accepted</dd></div><div><dt>Role</dt><dd>First author</dd></div><div><dt>When</dt><dd>2026</dd></div><div><dt>Where</dt><dd>Robotics &amp; AI Lab, Kwangwoon University</dd></div></dl>
+    </header>
+    <div class="project-body">
+      <div>
+        <section class="prose" aria-labelledby="abstract-h">
+          <h2 id="abstract-h">Abstract</h2>
+      <p>Robots exploring indoor environments often receive only partial observations of the surrounding scene, leaving unobserved objects and spatial relations unknown. We propose LatentSGC, a latent flow matching framework for uncertainty-aware 3D scene graph completion from partial robot observations.</p>
+      <p>LatentSGC first uses a Graph Autoencoder to encode scene graphs into per-node latent slots, and then applies Conditional Flow Matching to complete the unobserved slots by integrating a learned ODE conditioned on the observed subgraph. Since each inference run starts from independent Gaussian noise, multiple samples produce diverse yet plausible completions, providing a probabilistic belief over hidden room structures rather than a single deterministic prediction.</p>
+      <p>On a benchmark derived from HM3D-Semantics scenes at 30%, 50%, and 70% observation ratios, LatentSGC achieves Node F1 of 0.432 and Edge F1 of 0.255, outperforming deterministic baselines by 0.187 in Node F1 and 0.166 in Edge F1. We further demonstrate the integration of LatentSGC with an RGB-D perception pipeline in Habitat Simulator on rooms unseen during training, where it produces plausible completions of unobserved room structures.</p>
+        </section>
+        <div class="media">
+      <figure>
+        <img src="../../assets/images/projects/latent-flow-scene-graph/habitat-completion.webp" alt="An RGB view of a bedroom beside a 3D scene graph with observed and predicted objects such as bed, chair, shelves and curtain." width="1440" height="609" loading="lazy" decoding="async">
+        <figcaption>Integration with an RGB-D pipeline in Habitat, showing observed objects (OBS) and completed, predicted objects (PRED) in an unseen room.</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/projects/latent-flow-scene-graph/method.webp" alt="Architecture in which a graph autoencoder encodes the scene graph into latent slots, and conditional flow matching generates the missing slots." width="1231" height="607" loading="lazy" decoding="async">
+        <figcaption>Method overview, with (1) a graph autoencoder into per-node latent slots and (2) conditional flow matching over unobserved slots.</figcaption>
+      </figure>
+      <figure>
+        <img src="../../assets/images/projects/latent-flow-scene-graph/completions.webp" alt="Grid of top-down HM3D scenes with completed scene-graph nodes overlaid." width="1600" height="843" loading="lazy" decoding="async">
+        <figcaption>Scene graph completions across HM3D-Semantics scenes.</figcaption>
+      </figure>
+        </div>
+      </div>
+      <aside class="aside" aria-label="Project details">
+        <section><h2>Key results</h2><dl class="metrics"><div><dt>0.432</dt><dd>Node F1 (baseline 0.245)</dd></div><div><dt>0.255</dt><dd>Edge F1 (baseline 0.089)</dd></div><div><dt>30–70%</dt><dd>Observation ratios tested</dd></div></dl></section>
+<section><h2>Paper</h2><div class="citation">
+        <p><strong>Latent Flow Matching for Uncertainty-Aware 3D Scene Graph Completion from Partial Robot Observations</strong></p>
+        <p><strong>Ida Bagus Dwiweka Naratama</strong>, I Made Putra Arya Winata, Junghyun Oh</p>
+        <p><em>International Conference on Control, Automation and Systems (ICCAS 2026)</em></p>
+        <p><span class="tag status-accepted">Accepted</span></p>
+      </div></section>
+<section><h2>Topics &amp; tools</h2><ul class="tags"><li class="tag tag-neutral">3D scene graphs</li><li class="tag tag-neutral">Conditional flow matching</li><li class="tag tag-neutral">Graph neural networks</li><li class="tag tag-neutral">Generative models</li><li class="tag tag-neutral">Habitat</li><li class="tag tag-neutral">PyTorch</li></ul></section>
+      </aside>
+    </div>
+  </article>
+  <nav class="pager" aria-label="More projects"><a class="prev" href="../uncertainty-map-exploration/"><small>← Previous</small>Uncertainty-Driven Exploration for Object-Goal Navigation</a><a class="next" href="../vq-lama/"><small>Next →</small>VQ-LaMa for Discrete Semantic Map Inpainting</a></nav>
+</div>
+</main>
+<footer class="site-footer">
+  <div class="wrap">
+    <span>© 2026 Ida Bagus Dwiweka Naratama · Seoul, South Korea</span>
+    <span><a href="mailto:dwiwekan@gmail.com">dwiwekan@gmail.com</a> · <a href="https://github.com/dwiwekan" rel="me">GitHub</a> · <a href="https://www.linkedin.com/in/dwiwekan/" rel="me">LinkedIn</a> · <a href="../../llms.txt">llms.txt</a></span>
+  </div>
+</footer>
+</body>
+</html>
