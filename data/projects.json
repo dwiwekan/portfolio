@@ -191,7 +191,8 @@
     ],
     "highlights": [],
     "figures": [
-      { "src": "assets/images/projects/scout-mini-scene-graph/robot.webp", "width": 450, "height": 800, "alt": "An AgileX Scout Mini robot with sensors and an on-board laptop in a corridor.", "caption": "The AgileX Scout Mini platform used for deployment." }
+      { "src": "assets/images/projects/scout-mini-scene-graph/robot.webp", "width": 450, "height": 800, "alt": "An AgileX Scout Mini robot with sensors and an on-board laptop in a corridor.", "caption": "The AgileX Scout Mini platform used for deployment." },
+      { "src": "assets/images/projects/scout-mini-scene-graph/scene-map.webp", "width": 490, "height": 762, "alt": "A 3D reconstruction of lab corridors and a room, mapped by the Scout Mini robot.", "caption": "3D reconstruction of the lab mapped by the Scout Mini. Given the instruction “take the traffic cone”, the pipeline searches the scene graph for the best-matching object." }
     ],
     "tags": ["ROS 2", "Nav2", "3D scene graphs", "Open-set perception", "AgileX Scout Mini"],
     "links": []
