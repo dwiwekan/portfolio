@@ -96,7 +96,9 @@ def status_class(status):
 
 
 def venue_line(pub):
-    """Full venue string: name (short), location, volume/issue, pages."""
+    """Full venue string: name (short), location, volume/issue, pages. Empty for a venue kept private during double-blind review."""
+    if not pub.get("venue"):
+        return ""
     parts = [f"{pub['venue']} ({pub['venueShort']})" if pub["venueShort"] not in pub["venue"] else pub["venue"]]
     if pub.get("location"):
         parts.append(pub["location"])
@@ -115,7 +117,7 @@ def venue_line(pub):
 def kicker(proj):
     pub = PUB_BY_ID.get(proj.get("publication"))
     if pub:
-        return f"{pub['venueShort']} · {pub['status']}"
+        return f"{pub['venueShort']} · {pub['status']}" if pub.get("venueShort") else pub["status"]
     return proj["context"]
 
 
@@ -153,9 +155,10 @@ def scholarly_ld(pub, url=None):
         "headline": pub["title"],
         "name": pub["title"],
         "author": [{"@type": "Person", "name": a} for a in pub["authors"]],
-        "isPartOf": {"@type": "Periodical" if pub["type"] == "journal" else "Event", "name": pub["venue"]},
         "creativeWorkStatus": pub["status"],
     }
+    if pub.get("venue"):
+        obj["isPartOf"] = {"@type": "Periodical" if pub["type"] == "journal" else "Event", "name": pub["venue"]}
     if pub.get("date"):
         obj["datePublished"] = pub["date"]
     elif pub.get("year"):
@@ -267,7 +270,7 @@ def pub_item(pub, pre=""):
         <div>
           <h3>{title}</h3>
           <p class="authors">{authors_html(pub)}</p>
-          <p class="venue">{e(venue_line(pub))}</p>
+          {f'<p class="venue">{e(venue_line(pub))}</p>' if venue_line(pub) else ''}
           <p class="pub-links">{' '.join(links)}</p>
         </div>
         <span class="tag status {status_class(pub['status'])}">{e(pub['status'])}</span>
@@ -424,7 +427,9 @@ def build_project(i, proj):
 
     facts = []
     if pub:
-        facts += [("Venue", pub["venueShort"]), ("Status", pub["status"])]
+        if pub.get("venueShort"):
+            facts.append(("Venue", pub["venueShort"]))
+        facts.append(("Status", pub["status"]))
     facts += [("Role", proj["role"]), ("When", proj["period"]), ("Where", proj["context"])]
     facts_html = "".join(f"<div><dt>{e(k)}</dt><dd>{e(v)}</dd></div>" for k, v in facts)
 
@@ -448,7 +453,7 @@ def build_project(i, proj):
         aside.append(f"""<section><h2>Paper</h2><div class="citation">
         <p><strong>{e(pub['title'])}</strong></p>
         <p>{authors_html(pub)}</p>
-        <p><em>{e(venue_line(pub))}</em></p>
+        {f'<p><em>{e(venue_line(pub))}</em></p>' if venue_line(pub) else ''}
         <p><span class="tag {status_class(pub['status'])}">{e(pub['status'])}</span></p>
       </div></section>""")
     tags = "".join(f'<li class="tag tag-neutral">{e(t)}</li>' for t in proj["tags"])
@@ -569,8 +574,9 @@ def build_cv():
     exp = "\n".join(cv_entry(x["title"], x["organization"], span(x), x["location"], x["highlights"]) for x in P["experience"])
     teach = "\n".join(cv_entry(x["title"], x["organization"], span(x), x["location"], x["highlights"]) for x in P["teaching"])
     pubs = "\n".join(
-        f"      <li>{authors_html(p)}. “{e(p['title'])}.” <em>{e(venue_line(p))}</em>"
-        f"{'. DOI ' + e(p['doi']) if p.get('doi') else ''}. <strong>{e(p['status'])}</strong>.</li>" for p in PUBS)
+        f"      <li>{authors_html(p)}. “{e(p['title'])}.”"
+        f"{' <em>' + e(venue_line(p)) + '</em>.' if venue_line(p) else ''}"
+        f"{' DOI ' + e(p['doi']) + '.' if p.get('doi') else ''} <strong>{e(p['status'])}</strong>.</li>" for p in PUBS)
     projs = "\n".join(
         f"      <li><strong>{e(p['title'])}</strong> ({e(p['period'])}). {e(p['summary'])}</li>"
         for p in PROJECTS if p["category"] == "engineering")
@@ -672,7 +678,7 @@ def llms_txt():
     for p in PUBS:
         pos = p["authors"].index(P["name"]) + 1
         role = "First author" if pos == 1 else f"Author {pos} of {len(p['authors'])}"
-        line = f"- {p['title']}. {', '.join(p['authors'])}. {venue_line(p)}. {p['status']}. {role}."
+        line = f"- {p['title']}. {', '.join(p['authors'])}. {venue_line(p) + '. ' if venue_line(p) else ''}{p['status']}. {role}."
         if p.get("doi"):
             line += f" DOI: {p['doi']}."
         if p.get("project"):

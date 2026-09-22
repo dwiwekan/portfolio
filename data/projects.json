@@ -2,8 +2,8 @@
   {
     "slug": "conformal-scene-graph",
     "category": "research",
-    "title": "Graph-Space Conformal Prediction for 3D Scene Graph Completion",
-    "publication": "aaai2027-conformal",
+    "title": "Calibrated Uncertainty for 3D Scene Graph Completion",
+    "publication": "conformal-under-review",
     "period": "2026",
     "context": "Robotics & AI Lab, Kwangwoon University",
     "role": "First author",

@@ -69,11 +69,11 @@
           "name": "Junghyun Oh"
         }
       ],
+      "creativeWorkStatus": "Accepted",
       "isPartOf": {
         "@type": "Event",
         "name": "International Conference on Control, Automation and Systems"
       },
-      "creativeWorkStatus": "Accepted",
       "datePublished": "2026",
       "url": "https://dwiwekan.github.io/portfolio/projects/latent-flow-scene-graph/",
       "abstract": "Robots exploring indoor environments often receive only partial observations of the surrounding scene, leaving unobserved objects and spatial relations unknown. We propose LatentSGC, a latent flow matching framework for uncertainty-aware 3D scene graph completion from partial robot observations. LatentSGC first uses a Graph Autoencoder to encode scene graphs into per-node latent slots, and then applies Conditional Flow Matching to complete the unobserved slots by integrating a learned ODE conditioned on the observed subgraph. Since each inference run starts from independent Gaussian noise, multiple samples produce diverse yet plausible completions, providing a probabilistic belief over hidden room structures rather than a single deterministic prediction. On a benchmark derived from HM3D-Semantics scenes at 30%, 50%, and 70% observation ratios, LatentSGC achieves Node F1 of 0.432 and Edge F1 of 0.255, outperforming deterministic baselines by 0.187 in Node F1 and 0.166 in Edge F1. We further demonstrate the integration of LatentSGC with an RGB-D perception pipeline in Habitat Simulator on rooms unseen during training, where it produces plausible completions of unobserved room structures.",
