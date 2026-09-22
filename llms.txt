@@ -1,0 +1,19 @@
+# Ida Bagus Dwiweka Naratama
+
+> Master's student in AI and robotics. Research in embodied AI: object-goal navigation, uncertainty-aware exploration, and 3D scene graphs.
+
+- Email: dwiwekan@gmail.com
+- GitHub: https://github.com/dwiwekan
+- LinkedIn: https://www.linkedin.com/in/dwiwekan/
+
+## Research interests
+Object-goal navigation; 3D scene graphs; uncertainty estimation for exploration; learned navigation policies and sim-to-real transfer.
+
+## Publications
+- Latent flow matching for uncertainty-aware 3D scene graph completion from partial robot observations. ICCAS 2026. First author. Case study: /portfolio/Project-SceneGraph.dc.html
+- Transforming explicit map prediction into uncertainty exploration for object goal navigation. IJCAS 2026. First author. Case study: /portfolio/Project-MapPrediction.dc.html
+- Attention-guided semantic navigation learning from pose, goal text and visual input via exponential reward functions. IJCAS 2025. Second author. Case study: /portfolio/Project-AttentionNav.dc.html
+
+## Pages
+- Portfolio (home): /portfolio/
+- CV (print-ready): /portfolio/CV.dc.html

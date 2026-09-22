@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Latent flow matching for uncertainty-aware 3D scene graph completion from partial robot observations — ICCAS 2026 case study by Ida Bagus Dwiweka Naratama." />
+<meta name="author" content="Ida Bagus Dwiweka Naratama" />
+<link rel="stylesheet" href="_ds/broadsheet-4d4d86f8-4782-431c-890f-fd86a4bbed28/styles.css" />
+<script src="_ds/broadsheet-4d4d86f8-4782-431c-890f-fd86a4bbed28/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<script src="slot-lightbox.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Latent flow matching for uncertainty-aware 3D scene graph completion from partial robot observations",
+  "author": [
+    { "@type": "Person", "name": "Ida Bagus Dwiweka Naratama" }
+  ],
+  "datePublished": "2026",
+  "publisher": "International Conference on Control, Automation and Systems (ICCAS)",
+  "about": [ "3D scene graph", "flow matching", "uncertainty estimation", "robot perception" ]
+}
+</script>
+<style>
+  body { margin: 0; text-wrap: pretty; background: var(--color-bg); }
+  main a:not(.btn) { color: var(--color-accent-700); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--color-accent-700) 35%, transparent); }
+  main a:not(.btn):hover { color: var(--color-accent-600); border-bottom-color: var(--color-accent-600); }
+  a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+</style>
+</helmet>
+
+<nav class="nav" style="position:fixed; top:0; left:0; right:0; z-index:40; padding-block:10px; gap:20px; background:color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid color-mix(in srgb, var(--color-text) 12%, transparent); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1180px) / 2 + clamp(20px,5vw,72px)))">
+  <span class="nav-brand">Dwiweka Naratama</span>
+  <a href="index.html">← All work</a>
+  <a href="index.html#publications">Publications</a>
+  <a href="CV.dc.html">CV</a>
+</nav>
+
+<main style="max-width:1180px; margin:0 auto; padding:0 clamp(20px,5vw,72px); font-family:var(--font-body); color:var(--color-text)">
+
+  <header style="padding:144px 0 56px">
+    <span style="display:block; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin:0 0 22px">ICCAS 2026 · Conference paper</span>
+    <h1 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(34px,4.6vw,58px); line-height:1.1; letter-spacing:-0.02em; margin:0 0 0 -0.035em; max-width:26ch">Latent flow matching for uncertainty-aware 3D scene graph completion</h1>
+    <p style="font-size:19px; line-height:32px; max-width:56ch; margin:32px 0 0">A mobile robot observes only a fragment of an environment, yet must plan as though the remainder were known. This work completes the unobserved structure of a 3D scene graph generatively and reports a calibrated confidence for each inferred node and edge.</p>
+  </header>
+
+  <section aria-label="Details" style="padding:0 0 64px">
+    <hr style="height:5px; border:0; margin:0; border-top:2px solid var(--color-text); border-bottom:1px solid var(--color-text)" />
+    <p style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px 28px; margin:0; padding:14px 0; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">
+      <span>Venue — ICCAS 2026</span>
+      <span>Topic — Scene representation</span>
+      <span>Code — [add link]</span>
+    </p>
+    <hr style="height:0; border:0; border-top:1px solid var(--color-text); margin:0" />
+  </section>
+
+  <figure class="cmyk" style="margin:0 0 64px">
+    <div class="print"><image-slot id="sg-hero" shape="rect" style="width:100%; height:420px" placeholder="Drop the method figure or a scene-graph visualisation"></image-slot></div>
+    <figcaption style="font-size:13px; line-height:28px; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin-top:14px">Predicted scene graph over a partially observed indoor scan.</figcaption>
+  </figure>
+
+  <section style="padding:0 0 64px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:48px clamp(28px,5vw,72px)">
+    <div>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0">The problem</h2>
+      <p style="font-size:16px; line-height:28px; margin:18px 0 0; color:color-mix(in srgb, var(--color-text) 82%, transparent)">A scene graph constructed online from a robot's own observations is necessarily partial: rooms are partially viewed, objects occluded, and many relations never observed. Downstream planners nonetheless consume the graph as though complete, so each omission becomes a silent error, and a deterministic completion model renders that error indistinguishable from a confident prediction.</p>
+    </div>
+    <div>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0">The approach</h2>
+      <p style="font-size:16px; line-height:28px; margin:18px 0 0; color:color-mix(in srgb, var(--color-text) 82%, transparent)">The observed graph is encoded into a latent space, and a flow-matching model is trained to transport noise to plausible complete graphs conditioned on that latent representation. Repeated sampling yields a distribution rather than a point estimate; agreement across samples provides a calibrated per-node and per-edge confidence measure.</p>
+    </div>
+    <div>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0">Implications</h2>
+      <p style="font-size:16px; line-height:28px; margin:18px 0 0; color:color-mix(in srgb, var(--color-text) 82%, transparent)">A planner is able to distinguish structure that can be relied upon from structure requiring verification, and to direct the platform toward low-confidence regions — the same uncertainty signal employed in the exploration work described in the following study.</p>
+    </div>
+  </section>
+
+  <section style="padding:0 0 64px">
+    <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0 0 22px">Results</h2>
+    <table class="table" style="width:100%; max-width:760px">
+      <thead>
+        <tr><th scope="col">Metric</th><th scope="col">Baseline</th><th scope="col">Ours</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Node classification accuracy</td><td>[—]</td><td>[—]</td></tr>
+        <tr><td>Edge / relation F1</td><td>[—]</td><td>[—]</td></tr>
+        <tr><td>Uncertainty calibration (ECE)</td><td>[—]</td><td>[—]</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="padding:0 0 64px">
+    <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0 0 16px">Built with</h2>
+    <p style="margin:0; display:flex; flex-wrap:wrap; gap:8px"><span class="tag tag-neutral">PyTorch</span><span class="tag tag-neutral">Flow matching</span><span class="tag tag-neutral">Graph neural networks</span><span class="tag tag-neutral">Open3D</span><span class="tag tag-neutral">3D indoor scans</span></p>
+  </section>
+
+  <section style="padding:0 0 84px; display:flex; flex-wrap:wrap; gap:16px">
+    <a class="btn btn-secondary" href="Project-MapPrediction.dc.html">Next study →</a>
+    <a class="btn btn-ghost" href="index.html">Back to portfolio</a>
+  </section>
+</main>
+</x-dc>
+</body>
+</html>

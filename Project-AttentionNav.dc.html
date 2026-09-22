@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<meta name="description" content="Attention-guided semantic navigation learning from pose, goal text and visual input via exponential reward functions — IJCAS 2025 case study, second author." />
+<meta name="author" content="Ida Bagus Dwiweka Naratama" />
+<link rel="stylesheet" href="_ds/broadsheet-4d4d86f8-4782-431c-890f-fd86a4bbed28/styles.css" />
+<script src="_ds/broadsheet-4d4d86f8-4782-431c-890f-fd86a4bbed28/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<script src="slot-lightbox.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "ScholarlyArticle",
+  "headline": "Attention-guided semantic navigation learning from pose, goal text and visual input via exponential reward functions",
+  "author": [
+    { "@type": "Person", "name": "Ida Bagus Dwiweka Naratama" }
+  ],
+  "datePublished": "2025",
+  "publisher": "International Journal of Control, Automation and Systems (IJCAS)",
+  "about": [ "semantic navigation", "attention", "reward shaping", "reinforcement learning" ]
+}
+</script>
+<style>
+  body { margin: 0; text-wrap: pretty; background: var(--color-bg); }
+  main a:not(.btn) { color: var(--color-accent-700); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--color-accent-700) 35%, transparent); }
+  main a:not(.btn):hover { color: var(--color-accent-600); border-bottom-color: var(--color-accent-600); }
+  a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+</style>
+</helmet>
+
+<nav class="nav" style="position:fixed; top:0; left:0; right:0; z-index:40; padding-block:10px; gap:20px; background:color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid color-mix(in srgb, var(--color-text) 12%, transparent); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1180px) / 2 + clamp(20px,5vw,72px)))">
+  <span class="nav-brand">Dwiweka Naratama</span>
+  <a href="index.html">← All work</a>
+  <a href="index.html#publications">Publications</a>
+  <a href="CV.dc.html">CV</a>
+</nav>
+
+<main style="max-width:1180px; margin:0 auto; padding:0 clamp(20px,5vw,72px); font-family:var(--font-body); color:var(--color-text)">
+
+  <header style="padding:144px 0 56px">
+    <span style="display:block; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin:0 0 22px">IJCAS 2025 · Journal article</span>
+    <h1 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(34px,4.6vw,58px); line-height:1.1; letter-spacing:-0.02em; margin:0 0 0 -0.035em; max-width:26ch">Attention-guided semantic navigation from pose, text and vision</h1>
+    <p style="font-size:19px; line-height:32px; max-width:56ch; margin:32px 0 0">Three heterogeneous inputs — the robot's pose, the textual specification of the goal, and the current visual observation — are fused through an attention mechanism and trained with a reward that increases exponentially as the goal is approached.</p>
+  </header>
+
+  <section aria-label="Details" style="padding:0 0 64px">
+    <hr style="height:5px; border:0; margin:0; border-top:2px solid var(--color-text); border-bottom:1px solid var(--color-text)" />
+    <p style="display:flex; justify-content:space-between; flex-wrap:wrap; gap:14px 28px; margin:0; padding:14px 0; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">
+      <span>Venue — IJCAS 2025</span>
+      <span>Topic — Semantic navigation</span>
+      <span>Code — [add link]</span>
+    </p>
+    <hr style="height:0; border:0; border-top:1px solid var(--color-text); margin:0" />
+  </section>
+
+  <figure class="cmyk" style="margin:0 0 64px">
+    <div class="print"><image-slot id="an-hero" shape="rect" style="width:100%; height:420px" placeholder="Drop the architecture diagram or an attention map"></image-slot></div>
+    <figcaption style="font-size:13px; line-height:28px; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin-top:14px">Attention over visual features, conditioned on pose and the goal phrase.</figcaption>
+  </figure>
+
+  <section style="padding:0 0 64px; display:grid; grid-template-columns:repeat(auto-fit, minmax(260px,1fr)); gap:48px clamp(28px,5vw,72px)">
+    <div>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0">The problem</h2>
+      <p style="font-size:16px; line-height:28px; margin:18px 0 0; color:color-mix(in srgb, var(--color-text) 82%, transparent)">A policy that simply concatenates pose, language and visual features tends to rely on whichever modality is most readily predictive, while a sparse success reward provides little learning signal until the goal is reached by chance.</p>
+    </div>
+    <div>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0">The approach</h2>
+      <p style="font-size:16px; line-height:28px; margin:18px 0 0; color:color-mix(in srgb, var(--color-text) 82%, transparent)">Cross-attention allows the goal text to select the visual regions relevant at the current pose, and an exponential reward function sharpens the learning signal as the distance to the goal decreases — sufficiently dense to guide the policy while discouraging unproductive wandering.</p>
+    </div>
+    <div>
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0">Contribution</h2>
+      <p style="font-size:16px; line-height:28px; margin:18px 0 0; color:color-mix(in srgb, var(--color-text) 82%, transparent)">[State the components for which you were responsible, for example the reward formulation, the training pipeline, the ablation studies, or the evaluation framework.]</p>
+    </div>
+  </section>
+
+  <section style="padding:0 0 64px">
+    <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0 0 22px">Results</h2>
+    <table class="table" style="width:100%; max-width:760px">
+      <thead>
+        <tr><th scope="col">Metric</th><th scope="col">Baseline</th><th scope="col">Ours</th></tr>
+      </thead>
+      <tbody>
+        <tr><td>Success rate</td><td>[—]</td><td>[—]</td></tr>
+        <tr><td>SPL</td><td>[—]</td><td>[—]</td></tr>
+        <tr><td>Training episodes to converge</td><td>[—]</td><td>[—]</td></tr>
+      </tbody>
+    </table>
+  </section>
+
+  <section style="padding:0 0 64px">
+    <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:24px; line-height:32px; margin:0 0 16px">Built with</h2>
+    <p style="margin:0; display:flex; flex-wrap:wrap; gap:8px"><span class="tag tag-neutral">PyTorch</span><span class="tag tag-neutral">Cross-attention</span><span class="tag tag-neutral">Reward shaping</span><span class="tag tag-neutral">Simulated indoor scenes</span></p>
+  </section>
+
+  <section style="padding:0 0 84px; display:flex; flex-wrap:wrap; gap:16px">
+    <a class="btn btn-secondary" href="Project-SceneGraph.dc.html">First study →</a>
+    <a class="btn btn-ghost" href="index.html">Back to portfolio</a>
+  </section>
+</main>
+</x-dc>
+</body>
+</html>

@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<helmet>
+<title>Ida Bagus Dwiweka Naratama — Robotics &amp; Embodied AI</title>
+<meta name="description" content="Ida Bagus Dwiweka Naratama — Master's candidate in Robotics researching embodied artificial intelligence: object-goal navigation, uncertainty-aware exploration, and 3D scene graphs." />
+<meta name="author" content="Ida Bagus Dwiweka Naratama" />
+<meta name="keywords" content="embodied AI, robotics, object goal navigation, 3D scene graph, uncertainty, flow matching, semantic navigation, reinforcement learning" />
+<meta property="og:type" content="profile" />
+<meta property="og:title" content="Ida Bagus Dwiweka Naratama — Robotics and Embodied AI" />
+<meta property="og:description" content="Master's candidate in Robotics. Object-goal navigation, uncertainty-aware exploration, and 3D scene graph representation for embodied agents." />
+<meta name="robots" content="index, follow" />
+<link rel="stylesheet" href="_ds/broadsheet-4d4d86f8-4782-431c-890f-fd86a4bbed28/styles.css" />
+<script src="_ds/broadsheet-4d4d86f8-4782-431c-890f-fd86a4bbed28/_ds_bundle.js"></script>
+<script src="image-slot.js"></script>
+<script src="slot-lightbox.js"></script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Person",
+  "name": "Ida Bagus Dwiweka Naratama",
+  "givenName": "Ida Bagus Dwiweka",
+  "familyName": "Naratama",
+  "email": "mailto:dwiwekan@gmail.com",
+  "jobTitle": "Master's Candidate in Robotics",
+  "description": "Master's candidate in Robotics researching embodied artificial intelligence: object-goal navigation, uncertainty-aware exploration, and 3D scene graph completion.",
+  "knowsAbout": [
+    "Embodied AI",
+    "Robot Navigation",
+    "Object Goal Navigation",
+    "3D Scene Graphs",
+    "Reinforcement Learning",
+    "Flow Matching",
+    "Uncertainty Estimation",
+    "SLAM"
+  ],
+  "knowsLanguage": [ "Indonesian", "English" ],
+  "sameAs": [
+    "https://github.com/dwiwekan",
+    "https://www.linkedin.com/in/dwiwekan/"
+  ]
+}
+</script>
+<style>
+  body { margin: 0; text-wrap: pretty; background: var(--color-bg); }
+  main a:not(.btn) { color: var(--color-accent-700); text-decoration: none; border-bottom: 1px solid color-mix(in srgb, var(--color-accent-700) 35%, transparent); }
+  main a:not(.btn):hover { color: var(--color-accent-600); border-bottom-color: var(--color-accent-600); }
+  a:focus-visible { outline: 2px solid var(--color-accent); outline-offset: 2px; }
+  html { scroll-behavior: smooth; }
+  main section[id], main div[id] { scroll-margin-top: 92px; }
+  @media (prefers-reduced-motion: reduce) { html { scroll-behavior: auto; } }
+</style>
+</helmet>
+
+<nav class="nav" style="position:fixed; top:0; left:0; right:0; z-index:40; padding-block:10px; gap:20px; background:color-mix(in srgb, var(--color-bg) 88%, transparent); backdrop-filter:blur(10px); border-bottom:1px solid color-mix(in srgb, var(--color-text) 12%, transparent); padding-inline: max(clamp(20px,5vw,72px), calc((100% - 1180px) / 2 + clamp(20px,5vw,72px)))">
+  <span class="nav-brand">Dwiweka Naratama</span>
+  <a href="#projects">Projects</a>
+  <a href="#publications">Publications</a>
+  <a href="#background">Background</a>
+  <a class="btn btn-primary" href="CV.dc.html" style="color:var(--color-bg)">CV</a>
+</nav>
+
+<main style="max-width:1180px; margin:0 auto; padding:0 clamp(20px,5vw,72px); font-family:var(--font-body); color:var(--color-text)">
+
+  <header style="padding:150px 0 72px; display:grid; grid-template-columns:minmax(0,7fr) minmax(0,4fr); gap:40px clamp(28px,6vw,88px); align-items:start">
+    <div>
+      <h1 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:clamp(38px,5.4vw,68px); line-height:1.08; letter-spacing:-0.02em; margin:0 0 0 -0.035em">
+        <span style="display:block">Ida Bagus Dwiweka</span>
+        <span style="display:block">Naratama</span>
+      </h1>
+      <p style="font-size:19px; line-height:32px; max-width:54ch; margin:28px 0 0">
+        Master's candidate in Robotics, working on embodied artificial intelligence for mobile robots — object-goal navigation, uncertainty-aware exploration, and 3D scene graphs as a representation of unfamiliar indoor environments.
+      </p>
+      <p style="margin:24px 0 0; display:flex; flex-wrap:wrap; gap:8px">
+        <span class="tag tag-outline">Object-goal navigation</span>
+        <span class="tag tag-outline">3D scene graphs</span>
+        <span class="tag tag-outline">Uncertainty &amp; exploration</span>
+        <span class="tag tag-outline">Sim-to-real transfer</span>
+      </p>
+      <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:28px; align-items:center">
+        <a class="btn btn-primary" href="CV.dc.html">Curriculum vitae</a>
+        <a class="btn btn-secondary" href="mailto:dwiwekan@gmail.com">dwiwekan@gmail.com</a>
+        <a class="btn btn-ghost" href="https://github.com/dwiwekan" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn btn-ghost" href="https://www.linkedin.com/in/dwiwekan/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <figure class="halftone" style="margin:0">
+      <image-slot id="portrait" shape="rect" style="width:100%; height:340px" placeholder="Drop a photo of you (or a robot)"></image-slot>
+    </figure>
+  </header>
+
+  <section aria-label="At a glance" style="padding:0 0 72px">
+    <hr style="height:5px; border:0; margin:0; border-top:2px solid var(--color-text); border-bottom:1px solid var(--color-text)" />
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(170px,1fr)); gap:28px; padding:26px 0">
+      <div>
+        <p style="margin:0; font-family:var(--font-heading); font-size:38px; line-height:1.1">{{ totalCount }}</p>
+        <p style="margin:6px 0 0; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">Projects listed</p>
+      </div>
+      <div>
+        <p style="margin:0; font-family:var(--font-heading); font-size:38px; line-height:1.1; color:var(--color-accent-700)">{{ researchCount }}</p>
+        <p style="margin:6px 0 0; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">Published studies</p>
+      </div>
+      <div>
+        <p style="margin:0; font-family:var(--font-heading); font-size:38px; line-height:1.1">M.S.</p>
+        <p style="margin:6px 0 0; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">Robotics, in progress</p>
+      </div>
+      <div>
+        <p style="margin:0; font-family:var(--font-heading); font-size:38px; line-height:1.1">2025–26</p>
+        <p style="margin:6px 0 0; font-size:13px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">Most recent work</p>
+      </div>
+    </div>
+    <hr style="height:0; border:0; border-top:1px solid var(--color-text); margin:0" />
+  </section>
+
+  <section id="projects" style="padding:0 0 84px">
+    <div style="display:flex; align-items:baseline; justify-content:space-between; flex-wrap:wrap; gap:14px; margin:0 0 10px">
+      <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:32px; line-height:42px; letter-spacing:-0.015em; margin:0">Projects</h2>
+      <a href="https://github.com/dwiwekan" target="_blank" rel="noopener" style="font-size:15.5px; line-height:22px">All repositories on GitHub →</a>
+    </div>
+    <p style="font-size:16px; line-height:28px; margin:0 0 26px; max-width:60ch; color:color-mix(in srgb, var(--color-text) 82%, transparent)">Published studies open a full write-up; earlier implementation work opens in place.</p>
+
+    <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(300px,1fr)); gap:22px">
+      <sc-for list="{{ research }}" as="p" hint-placeholder-count="3">
+        <a class="card elev-sm" href="{{ p.href }}" style="display:flex; flex-direction:column; gap:0; padding:0; overflow:hidden; border-bottom:0; color:var(--color-text)">
+          <figure class="halftone" style="margin:0">
+            <image-slot id="{{ p.slotId }}" shape="rect" style="width:100%; height:170px" placeholder="Drop a figure for this project"></image-slot>
+          </figure>
+          <span style="display:flex; flex-direction:column; gap:8px; padding:20px">
+            <span class="card-kicker">{{ p.meta }}</span>
+            <span class="card-title">{{ p.title }}</span>
+            <span class="card-body">{{ p.summary }}</span>
+            <span class="card-meta">{{ p.tech }}</span>
+          </span>
+        </a>
+      </sc-for>
+
+      <sc-for list="{{ projects }}" as="p" hint-placeholder-count="3">
+        <button type="button" class="card elev-sm" onClick="{{ p.open }}" style="display:flex; flex-direction:column; gap:8px; width:100%; text-align:left; cursor:pointer; font-family:var(--font-body); color:var(--color-text)">
+          <span class="card-kicker">{{ p.meta }}</span>
+          <span class="card-title">{{ p.title }}</span>
+          <span class="card-body">{{ p.summary }}</span>
+          <span class="card-meta">{{ p.tech }}</span>
+        </button>
+      </sc-for>
+    </div>
+  </section>
+
+  <section id="publications" style="padding:0 0 84px">
+    <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:32px; line-height:42px; letter-spacing:-0.015em; margin:0 0 26px">Publications</h2>
+    <ol style="margin:0; padding:0; list-style:none; display:flex; flex-direction:column; gap:28px">
+      <li style="display:grid; grid-template-columns:auto minmax(0,1fr); gap:20px">
+        <span style="font-family:var(--font-heading); font-size:17px; line-height:28px; color:var(--color-accent-700)">01</span>
+        <div>
+          <p style="margin:0; font-size:16.5px; line-height:28px; max-width:70ch"><strong style="font-weight:600">Latent flow matching for uncertainty-aware 3D scene graph completion from partial robot observations.</strong> I. B. D. Naratama et al. <em>International Conference on Control, Automation and Systems (ICCAS)</em>, 2026.</p>
+          <p style="margin:8px 0 0"><span class="tag tag-outline">Conference paper</span></p>
+        </div>
+      </li>
+      <li style="display:grid; grid-template-columns:auto minmax(0,1fr); gap:20px">
+        <span style="font-family:var(--font-heading); font-size:17px; line-height:28px; color:var(--color-accent-700)">02</span>
+        <div>
+          <p style="margin:0; font-size:16.5px; line-height:28px; max-width:70ch"><strong style="font-weight:600">Transforming explicit map prediction into uncertainty exploration for object goal navigation.</strong> I. B. D. Naratama et al. <em>International Journal of Control, Automation and Systems (IJCAS)</em>, 2026.</p>
+          <p style="margin:8px 0 0"><span class="tag tag-outline">Journal article</span></p>
+        </div>
+      </li>
+      <li style="display:grid; grid-template-columns:auto minmax(0,1fr); gap:20px">
+        <span style="font-family:var(--font-heading); font-size:17px; line-height:28px; color:var(--color-accent-700)">03</span>
+        <div>
+          <p style="margin:0; font-size:16.5px; line-height:28px; max-width:70ch"><strong style="font-weight:600">Attention-guided semantic navigation learning from pose, goal text and visual input via exponential reward functions.</strong> [First author], I. B. D. Naratama et al. <em>International Journal of Control, Automation and Systems (IJCAS)</em>, 2025.</p>
+          <p style="margin:8px 0 0"><span class="tag tag-outline">Journal article</span></p>
+        </div>
+      </li>
+    </ol>
+  </section>
+
+  <section id="background" style="padding:0 0 72px; display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:56px clamp(28px,6vw,88px)">
+    <div>
+      <span style="display:block; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin:0 0 22px">Experience</span>
+      <div style="display:flex; flex-direction:column; gap:26px">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; line-height:28px; margin:0">Graduate Researcher — [Lab name]</h3>
+          <p style="margin:4px 0 0; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">[University] · [20XX – present]</p>
+          <p style="margin:12px 0 0; font-size:15.5px; line-height:28px; max-width:46ch; color:color-mix(in srgb, var(--color-text) 82%, transparent)">Research on embodied navigation and 3D scene understanding, with resulting publications listed above.</p>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; line-height:28px; margin:0">[Previous role]</h3>
+          <p style="margin:4px 0 0; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">[Organisation] · [20XX – 20XX]</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span style="display:block; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin:0 0 22px">Education</span>
+      <div style="display:flex; flex-direction:column; gap:26px">
+        <div>
+          <h3 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; line-height:28px; margin:0">M.S. Robotics (in progress)</h3>
+          <p style="margin:4px 0 0; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">[University] · [20XX – 20XX]</p>
+          <p style="margin:12px 0 0; font-size:15.5px; line-height:28px; max-width:46ch; color:color-mix(in srgb, var(--color-text) 82%, transparent)">Thesis topic: uncertainty-aware scene representation for object-goal navigation.</p>
+        </div>
+        <div>
+          <h3 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:20px; line-height:28px; margin:0">B.S. — [Program]</h3>
+          <p style="margin:4px 0 0; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">[University] · [20XX – 20XX]</p>
+        </div>
+      </div>
+    </div>
+    <div>
+      <span style="display:block; font-size:13px; line-height:14px; letter-spacing:0.08em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent); margin:0 0 22px">Skills</span>
+      <div style="display:flex; flex-direction:column; gap:18px">
+        <p style="margin:0; font-size:15.5px; line-height:28px"><strong style="font-weight:600">Research —</strong> reinforcement learning, flow matching and diffusion, uncertainty estimation, graph neural networks, vision-language grounding.</p>
+        <p style="margin:0; font-size:15.5px; line-height:28px"><strong style="font-weight:600">Engineering —</strong> Python, PyTorch, ROS / ROS 2, C++, Docker, Linux, CUDA.</p>
+        <p style="margin:0; font-size:15.5px; line-height:28px"><strong style="font-weight:600">Tooling —</strong> Habitat, Isaac Sim, Gazebo, Open3D, SLAM stacks.</p>
+        <p style="margin:0; font-size:15.5px; line-height:28px"><strong style="font-weight:600">Languages —</strong> Indonesian (native), English (IELTS 6.5).</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="contact" style="padding:0 0 84px">
+    <h2 style="font-family:var(--font-heading); font-weight:var(--font-heading-weight); font-size:32px; line-height:42px; letter-spacing:-0.015em; margin:0; max-width:34ch">Contact</h2>
+    <p style="font-size:16.5px; line-height:28px; margin:20px 0 0; max-width:56ch; color:color-mix(in srgb, var(--color-text) 82%, transparent)">I welcome correspondence regarding navigation, scene representation, and related topics, as well as research collaboration and position enquiries. I can be reached at <a href="mailto:dwiwekan@gmail.com">dwiwekan@gmail.com</a>.</p>
+    <div style="display:flex; flex-wrap:wrap; gap:14px; margin-top:26px">
+      <a class="btn btn-primary" href="mailto:dwiwekan@gmail.com">dwiwekan@gmail.com</a>
+      <a class="btn btn-secondary" href="CV.dc.html">Curriculum vitae</a>
+      <a class="btn btn-ghost" href="https://github.com/dwiwekan" target="_blank" rel="noopener">github.com/dwiwekan</a>
+    </div>
+  </section>
+
+  <sc-if value="{{ isOpen }}" hint-placeholder-val="{{ false }}">
+    <div class="dialog-backdrop" onClick="{{ close }}" style="position:fixed; inset:0; display:flex; align-items:center; justify-content:center; padding:24px; z-index:50">
+      <div class="dialog" role="dialog" aria-modal="true" onClick="{{ stop }}" style="max-width:620px; width:100%; max-height:86vh; overflow:auto">
+        <figure class="halftone" style="margin:0 0 20px">
+          <image-slot id="{{ active.slotId }}" shape="rect" style="width:100%; height:260px" placeholder="Drop a photo of this project"></image-slot>
+        </figure>
+        <p style="margin:0 0 6px; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">{{ active.date }}</p>
+        <h3 class="dialog-title" style="margin:0">{{ active.title }}</h3>
+        <div class="dialog-body">
+          <p style="margin:0 0 14px; font-size:16px; line-height:28px">{{ active.description }}</p>
+          <p style="margin:0; font-size:13px; letter-spacing:0.06em; text-transform:uppercase; color:color-mix(in srgb, var(--color-text) 70%, transparent)">{{ active.tech }}</p>
+        </div>
+        <div class="dialog-actions" style="display:flex; gap:12px; flex-wrap:wrap; margin-top:20px">
+          <a class="btn btn-ghost" href="{{ active.link }}" target="_blank" rel="noopener">Repository</a>
+          <button type="button" class="btn btn-primary" onClick="{{ close }}" style="color:var(--color-bg)">Close</button>
+        </div>
+      </div>
+    </div>
+  </sc-if>
+
+  <footer style="padding:48px 0; font-size:13px; line-height:28px; color:color-mix(in srgb, var(--color-text) 70%, transparent)">© 2026 Ida Bagus Dwiweka Naratama · Robotics and embodied artificial intelligence · <a href="Portfolio-Print.dc.html">print version</a></footer>
+</main>
+</x-dc>
+<script type="text/x-dc" data-dc-script>
+class Component extends DCLogic {
+  state = { open: null };
+
+  research = [
+    {
+      slotId: 'work-scenegraph',
+      href: 'Project-SceneGraph.dc.html',
+      meta: 'ICCAS 2026 · Conference paper',
+      title: 'Latent flow matching for uncertainty-aware 3D scene graph completion',
+      summary: 'Completes the unobserved structure of a 3D scene graph generatively and reports a calibrated confidence for each inferred node and edge.',
+      tech: 'PyTorch · Flow matching · Graph neural networks'
+    },
+    {
+      slotId: 'work-mapprediction',
+      href: 'Project-MapPrediction.dc.html',
+      meta: 'IJCAS 2026 · Journal article',
+      title: 'Explicit map prediction as uncertainty exploration for object-goal navigation',
+      summary: 'Predictive disagreement over unobserved space is reformulated as an explicit exploration objective rather than treated as ground truth.',
+      tech: 'PyTorch · Habitat · Frontier planning'
+    },
+    {
+      slotId: 'work-attentionnav',
+      href: 'Project-AttentionNav.dc.html',
+      meta: 'IJCAS 2025 · Journal article',
+      title: 'Attention-guided semantic navigation from pose, goal text and vision',
+      summary: 'Pose, textual goal and visual observation are fused by cross-attention and trained with an exponential reward function.',
+      tech: 'PyTorch · Cross-attention · Reward shaping'
+    }
+  ];
+
+  // Earlier implementation work — edit this list; cards and pop-up both read it.
+  projects = [
+    {
+      slotId: 'other-1',
+      title: '[Project name]',
+      date: '[Month 20XX]',
+      meta: '[20XX] · [Type]',
+      summary: '[One sentence describing the system and your role in building it.]',
+      description: '[A short paragraph: the problem addressed, what was implemented, and the outcome. Two or three sentences.]',
+      tech: '[Python · ROS]',
+      link: 'https://github.com/dwiwekan'
+    },
+    {
+      slotId: 'other-2',
+      title: '[Project name]',
+      date: '[Month 20XX]',
+      meta: '[20XX] · [Type]',
+      summary: '[One sentence describing the system and your role in building it.]',
+      description: '[A short paragraph: the problem addressed, what was implemented, and the outcome.]',
+      tech: '[PyTorch · Habitat]',
+      link: 'https://github.com/dwiwekan'
+    },
+    {
+      slotId: 'other-3',
+      title: '[Project name]',
+      date: '[Month 20XX]',
+      meta: '[20XX] · [Type]',
+      summary: '[One sentence describing the system and your role in building it.]',
+      description: '[A short paragraph: the problem addressed, what was implemented, and the outcome.]',
+      tech: '[C++ · Embedded]',
+      link: 'https://github.com/dwiwekan'
+    }
+  ];
+
+  componentDidMount() {
+    this._onKey = (e) => { if (e.key === 'Escape') this.setState({ open: null }); };
+    window.addEventListener('keydown', this._onKey);
+  }
+
+  componentWillUnmount() {
+    window.removeEventListener('keydown', this._onKey);
+  }
+
+  renderVals() {
+    const projects = this.projects.map((p, i) => ({
+      ...p,
+      open: () => this.setState({ open: i })
+    }));
+    const active = this.state.open == null ? null : projects[this.state.open];
+    return {
+      research: this.research,
+      projects,
+      researchCount: this.research.length,
+      totalCount: this.research.length + this.projects.length,
+      active,
+      isOpen: !!active,
+      close: () => this.setState({ open: null }),
+      stop: (e) => e.stopPropagation()
+    };
+  }
+}
+</script>
+</body>
+</html>
