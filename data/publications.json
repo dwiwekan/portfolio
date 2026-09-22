@@ -56,6 +56,7 @@
     "date": "2025-11",
     "location": "Jeju, Korea",
     "pages": "273–274",
+    "url": "https://www.kicem.or.kr/pages_publications/journals_search.vm?FString=Simulation&purl=search&pageType=conf_journal&dbchoice=all&QU=Simulation",
     "status": "Published",
     "project": "construction-site-quadruped"
   },
@@ -70,6 +71,7 @@
     "date": "2025-11",
     "location": "Incheon, Korea",
     "pages": "139–144",
+    "doi": "10.23919/ICCAS66577.2025.11301302",
     "status": "Published",
     "project": "attention-semantic-navigation"
   },

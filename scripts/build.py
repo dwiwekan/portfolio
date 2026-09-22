@@ -167,6 +167,8 @@ def scholarly_ld(pub, url=None):
         obj["pagination"] = pub["pages"]
     if pub.get("doi"):
         obj["sameAs"] = "https://doi.org/" + pub["doi"]
+    elif pub.get("url"):
+        obj["sameAs"] = pub["url"]
     if url:
         obj["url"] = url
     return obj
@@ -266,6 +268,8 @@ def pub_item(pub, pre=""):
         links.append(f'<a href="{pre}projects/{proj["slug"]}/">Abstract &amp; figures</a>')
     if pub.get("doi"):
         links.append(f'<a href="https://doi.org/{e(pub["doi"])}">DOI {e(pub["doi"])}</a>')
+    elif pub.get("url"):
+        links.append(f'<a href="{e(pub["url"])}">Paper listing</a>')
     return f"""      <li class="pub">
         <div>
           <h3>{title}</h3>
@@ -454,6 +458,7 @@ def build_project(i, proj):
         <p><strong>{e(pub['title'])}</strong></p>
         <p>{authors_html(pub)}</p>
         {f'<p><em>{e(venue_line(pub))}</em></p>' if venue_line(pub) else ''}
+        {f'<p><a href="https://doi.org/{e(pub["doi"])}">DOI {e(pub["doi"])}</a></p>' if pub.get("doi") else f'<p><a href="{e(pub["url"])}">Paper listing</a></p>' if pub.get("url") else ''}
         <p><span class="tag {status_class(pub['status'])}">{e(pub['status'])}</span></p>
       </div></section>""")
     tags = "".join(f'<li class="tag tag-neutral">{e(t)}</li>' for t in proj["tags"])
