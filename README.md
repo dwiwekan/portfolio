@@ -45,13 +45,14 @@ python3 scripts/build.py
 python3 -m http.server 8000 --directory ..   # then open http://localhost:8000/portfolio/
 ```
 
-Regenerate the PDF CV after changing profile or publication data (the server must be running):
+The CV buttons open `assets/documents/Ida-Bagus-Dwiweka-Naratama-CV.pdf`, which is the Word CV.
+To update it, export the new PDF from Word and copy it over that file:
 
 ```bash
-google-chrome --headless=new --no-pdf-header-footer \
-  --print-to-pdf=assets/documents/Ida-Bagus-Dwiweka-Naratama-CV.pdf \
-  http://localhost:8000/portfolio/cv/
+cp "cv/Ida Bagus Dwiweka Naratama CV.pdf" assets/documents/Ida-Bagus-Dwiweka-Naratama-CV.pdf
 ```
+
+The exported copy in `cv/` is gitignored. `cv/index.html` is a generated text version of the CV for search engines and ATS parsers.
 
 ## Adding a project
 

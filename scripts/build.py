@@ -216,7 +216,7 @@ def page(*, path, title, description, body, pre, og_image=None, og_type="website
     <nav class="nav" aria-label="Main">
       <span class="nav-brand"><a href="{pre or './'}">{e(P['shortName'])}</a></span>
 {nav_html}
-      <a class="btn btn-primary" href="{pre}cv/">CV</a>
+      <a class="btn btn-primary" href="{pre}{CV_PDF}" type="application/pdf">CV</a>
     </nav>
   </div>
 </header>
@@ -322,7 +322,7 @@ def build_home():
       <p class="availability">{e(P['availability'])}.</p>
       <ul class="focus" aria-label="Focus areas">{focus}</ul>
       <div class="actions">
-        <a class="btn btn-primary" href="{CV_PDF}" download>Download CV (PDF)</a>
+        <a class="btn btn-primary" href="{CV_PDF}" type="application/pdf">View CV (PDF)</a>
         <a class="btn btn-secondary" href="mailto:{e(P['email'])}">{e(P['email'])}</a>{socials}
       </div>
     </div>
@@ -385,7 +385,7 @@ def build_home():
     <p>{e(P['contactNote'])}</p>
     <div class="actions">
       <a class="btn btn-primary" href="mailto:{e(P['email'])}">{e(P['email'])}</a>{socials}
-      <a class="btn btn-ghost" href="cv/">View CV</a>
+      <a class="btn btn-ghost" href="{CV_PDF}" type="application/pdf">View CV</a>
     </div>
   </section>
 </div>"""
